@@ -165,7 +165,7 @@ const ImageEnlargerTool = () => {
           <p>The concept of image scaling has been around since the early days of digital imaging. One of the earliest and most basic interpolation algorithms, nearest-neighbor interpolation, was used in the 1970s to display digital images on CRT monitors.</p>
         </CardContent>
       </Card>
-      <RelatedTools category="image-editing-tools" />
+      <RelatedTools category="image-editing-tools" currentToolName="image-enlarger" />
     </div>
   );
 };

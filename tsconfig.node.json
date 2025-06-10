@@ -7,11 +7,11 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "react-jsx",
+    "composite": true,
 
     /* Linting */
     "strict": true,
@@ -19,5 +19,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vite.config.ts", "scripts/**/*.ts"]
+  "include": ["vite.config.ts", "scripts/**/*.ts"],
+  "references": []
 }

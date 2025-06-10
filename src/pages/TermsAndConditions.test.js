@@ -1,0 +1,11 @@
+import { jsx as _jsx } from "react/jsx-runtime";
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import TermsAndConditionsPage from './TermsAndConditions';
+describe('TermsAndConditionsPage', () => {
+    it('renders the terms and conditions page', () => {
+        render(_jsx(HelmetProvider, { children: _jsx(MemoryRouter, { children: _jsx(TermsAndConditionsPage, {}) }) }));
+        expect(screen.getByRole('heading', { name: /terms and conditions/i, level: 1 })).toBeInTheDocument();
+    });
+});

@@ -1,0 +1,9 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Link } from 'react-router-dom';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Seo } from '@/components/Seo';
+import { toolCategories } from '@/data/tools';
+const ToolsDirectoryPage = () => {
+    return (_jsxs(_Fragment, { children: [_jsx(Seo, { title: "Free Online Tools | Seotooler", description: "Explore our full suite of free online tools for SEO, web development, text analysis, image editing, and more. Everything you need in one place." }), _jsxs("div", { className: "space-y-12", children: [_jsxs("section", { className: "text-center", children: [_jsx("h1", { className: "text-4xl md:text-5xl font-extrabold tracking-tighter mb-4", children: "Our Suite of Free Tools" }), _jsx("p", { className: "max-w-2xl mx-auto text-lg text-muted-foreground", children: "From SEO analysis to text manipulation, we've got you covered. Explore the tools that will help you work smarter, not harder." })] }), _jsx("section", { children: _jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", children: Object.values(toolCategories).map((category) => (_jsx(Link, { to: `/tools/${category.slug}`, className: "block hover:-translate-y-1 transition-transform duration-200", children: _jsxs(Card, { className: "h-full flex flex-col text-center items-center justify-center p-6", children: [_jsxs(CardHeader, { children: [_jsx("div", { className: "mx-auto bg-primary/10 p-4 rounded-full mb-4", children: category.icon }), _jsx(CardTitle, { className: "text-2xl", children: category.name })] }), _jsx(CardDescription, { className: "text-base", children: category.description })] }) }, category.slug))) }) })] })] }));
+};
+export default ToolsDirectoryPage;

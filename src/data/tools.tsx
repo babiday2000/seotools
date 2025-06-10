@@ -139,7 +139,7 @@ Yes, our Keyword Suggestion Tool is completely free to use. We believe in provid
 ### Fun Fact
 
 Did you know that approximately 15% of all Google searches are new, meaning they have never been searched for before? This highlights the dynamic nature of search behavior and the importance of continuously researching and discovering new keywords to stay ahead of the curve.`,
-        component: lazy(() => import('@/components/tools/seo/KeywordsSuggestionTool')),
+        component: lazy(() => import('../components/tools/seo/KeywordsSuggestionTool')),
       },
       {
         slug: 'keyword-density-checker',
@@ -171,7 +171,7 @@ Keyword stuffing is the practice of loading a webpage with keywords or numbers i
 ### Fun Fact
 
 The term "keyword stuffing" was first used in the late 1990s, when search engines were still in their infancy. At the time, it was a common practice for webmasters to stuff their pages with keywords to improve their rankings. However, search engines have since become much more sophisticated, and keyword stuffing is now considered a black-hat SEO technique.`,
-        component: lazy(() => import('@/components/tools/seo/KeywordDensityCheckerTool')),
+        component: lazy(() => import('../components/tools/seo/KeywordDensityCheckerTool')),
       },
       {
         slug: 'meta-tag-generator',
@@ -203,7 +203,7 @@ Most search engines, including Google, no longer use the keywords meta tag in th
 ### Fun Fact
 
 The meta tag was first introduced in 1995 by Netscape. It was originally used to provide information about the page to the browser, but it was quickly adopted by search engines as a way to understand the content of a page.`,
-        component: lazy(() => import('@/components/tools/seo/MetaTagGeneratorTool')),
+        component: lazy(() => import('../components/tools/seo/MetaTagGeneratorTool')),
       },
       {
         slug: 'meta-tag-analyzer',
@@ -235,7 +235,7 @@ Some common meta tag issues include missing or duplicate title tags, short or lo
 ### Fun Fact
 
 The first meta tag was the "isindex" tag, which was used to indicate that a page was searchable. It was introduced in 1994 by Tim Berners-Lee, the inventor of the World Wide Web.`,
-        component: lazy(() => import('@/components/tools/seo/MetaTagAnalyzerTool')),
+        component: lazy(() => import('../components/tools/seo/MetaTagAnalyzerTool')),
       },
       {
         slug: 'open-graph-checker',
@@ -269,7 +269,7 @@ A: The most important Open Graph tags are og:title, og:description, and og:image
 Fun Fact
 
 The Open Graph protocol was created by Facebook in 2010. It was designed to make it easier for websites to integrate with Facebook's social graph.`,
-        component: lazy(() => import('@/components/tools/seo/OpenGraphCheckerTool')),
+        component: lazy(() => import('../components/tools/seo/OpenGraphCheckerTool')),
       },
       {
         slug: 'open-graph-generator',
@@ -303,7 +303,7 @@ A: Yes, it's a good practice to use both Open Graph and Twitter Cards to ensure 
 Fun Fact
 
 The Open Graph protocol was created by Facebook in 2010. It was designed to make it easier for websites to integrate with Facebook's social graph.`,
-        component: lazy(() => import('@/components/tools/seo/OpenGraphGeneratorTool')),
+        component: lazy(() => import('../components/tools/seo/OpenGraphGeneratorTool')),
       },
       {
         slug: 'twitter-card-generator',
@@ -337,7 +337,7 @@ A: You can use the Twitter Card Validator to check if your tags are implemented 
 Fun Fact
 
 Twitter was created in March 2006 by Jack Dorsey, Noah Glass, Biz Stone, and Evan Williams and launched in July of that year. The service rapidly gained worldwide popularity.`,
-        component: lazy(() => import('@/components/tools/seo/TwitterCardGeneratorTool')),
+        component: lazy(() => import('../components/tools/seo/TwitterCardGeneratorTool')),
       },
       {
         slug: 'utm-builder',
@@ -371,7 +371,7 @@ A: You can use UTM parameters in any URL that you want to track. For example, yo
 Fun Fact
 
 UTM stands for Urchin Tracking Module. Urchin was a web analytics company that was acquired by Google in 2005. The technology from Urchin was used to create Google Analytics.`,
-        component: lazy(() => import('@/components/tools/seo/UTMBuilderTool')),
+        component: lazy(() => import('../components/tools/seo/UTMBuilderTool')),
       },
       // Web Development Tools
       {
@@ -380,7 +380,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'HTML Decoder',
         description: 'Convert HTML entities back into their original characters.',
         longDescription: "The HTML Decoder is a tool that transforms HTML entities back into their original characters. This is useful for developers who need to work with data that has been sanitized for security, or when working with data from databases or APIs where HTML has been encoded to prevent Cross-Site Scripting (XSS) attacks. Decoding allows the raw text to be retrieved and manipulated correctly.",
-        component: lazy(() => import('@/components/tools/web-development/HtmlDecoderTool')),
+        component: lazy(() => import('../components/tools/web-development/HtmlDecoderTool')),
       },
       {
         slug: 'html-encoder',
@@ -388,7 +388,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'HTML Encoder',
         description: 'Convert special characters into HTML entities for safe display on web pages.',
         longDescription: "The HTML Encoder is an essential tool for web developers, allowing you to convert special characters into their corresponding HTML entities. This is crucial for displaying code snippets, handling user-generated content, and preventing Cross-Site Scripting (XSS) attacks. By encoding characters like `<`, `>`, and `&`, you ensure that they are rendered as text rather than being interpreted as HTML code, which is vital for both security and content integrity.",
-        component: lazy(() => import('@/components/tools/web-development/HtmlEncoderTool')),
+        component: lazy(() => import('../components/tools/web-development/HtmlEncoderTool')),
       },
       {
         slug: 'html-beautifier',
@@ -396,7 +396,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'HTML Beautifier',
         description: 'Format messy HTML code to make it clean, readable, and well-structured.',
         longDescription: "The HTML Beautifier is a code formatter that transforms cluttered or minified HTML into a well-organized format. It adds proper indentation and line breaks, making the code easy to read, debug, and maintain. This is essential for developers who need to work with unformatted HTML source code, improving both readability and productivity.",
-        component: lazy(() => import('@/components/tools/web-development/HtmlBeautifierTool')),
+        component: lazy(() => import('../components/tools/web-development/HtmlBeautifierTool')),
       },
       {
         slug: 'html-minifier',
@@ -404,7 +404,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'HTML Minifier',
         description: 'Reduce the file size of your HTML by removing unnecessary characters and whitespace.',
         longDescription: "The HTML Minifier is a tool that removes all unnecessary characters from HTML code without changing its functionality. This includes removing whitespace, comments, and other non-essential characters. The goal of minification is to reduce the file size of the HTML document, which leads to faster page load times. This is a crucial optimization technique for any website, as page speed is a key factor in both user experience and search engine rankings.",
-        component: lazy(() => import('@/components/tools/web-development/HtmlMinifierTool')),
+        component: lazy(() => import('../components/tools/web-development/HtmlMinifierTool')),
       },
       {
         slug: 'css-beautifier',
@@ -412,7 +412,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'CSS Beautifier',
         description: 'Format messy CSS code to make it clean, readable, and well-structured.',
         longDescription: "The CSS Beautifier is a code formatter that transforms cluttered or minified CSS into a well-organized format. It adds proper indentation and line breaks, making the code easy to read, debug, and maintain. This is essential for developers who need to work with unformatted CSS source code, improving both readability and productivity.",
-        component: lazy(() => import('@/components/tools/web-development/CssBeautifierTool')),
+        component: lazy(() => import('../components/tools/web-development/CssBeautifierTool')),
       },
       {
         slug: 'css-minifier',
@@ -420,7 +420,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'CSS Minifier',
         description: 'Reduce the file size of your CSS by removing unnecessary characters and whitespace.',
         longDescription: "The CSS Minifier is a tool that removes all unnecessary characters from CSS code without affecting its functionality. This includes removing whitespace, comments, and other non-essential characters. The goal of minification is to reduce the file size of the CSS document, which leads to faster page load times. This is a crucial optimization technique for any website, as page speed is a key factor in both user experience and search engine rankings.",
-        component: lazy(() => import('@/components/tools/web-development/CssMinifierTool')),
+        component: lazy(() => import('../components/tools/web-development/CssMinifierTool')),
       },
       {
         slug: 'javascript-beautifier',
@@ -428,7 +428,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JavaScript Beautifier',
         description: 'Format messy JavaScript code to make it clean, readable, and well-structured.',
         longDescription: "The JavaScript Beautifier is a code formatter that transforms cluttered or minified JavaScript into a well-organized format. It adds proper indentation and line breaks, making the code easy to read, debug, and maintain. This is essential for developers who need to work with unformatted JavaScript source code, improving both readability and productivity.",
-        component: lazy(() => import('@/components/tools/web-development/JavaScriptBeautifierTool')),
+        component: lazy(() => import('../components/tools/web-development/JavaScriptBeautifierTool')),
       },
       {
         slug: 'javascript-minifier',
@@ -436,7 +436,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JavaScript Minifier',
         description: 'Reduce the file size of your JavaScript by removing unnecessary characters and whitespace.',
         longDescription: "The JavaScript Minifier is a tool that removes all unnecessary characters from JavaScript code without affecting its functionality. This includes removing whitespace, comments, and other non-essential characters, as well as shortening variable and function names. The goal of minification is to reduce the file size of the JavaScript document, which leads to faster page load times. This is a crucial optimization technique for any website, as page speed is a key factor in both user experience and search engine rankings.",
-        component: lazy(() => import('@/components/tools/web-development/JavaScriptMinifierTool')),
+        component: lazy(() => import('../components/tools/web-development/JavaScriptMinifierTool')),
       },
       {
         slug: 'javascript-deobfuscator',
@@ -444,7 +444,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JavaScript Deobfuscator',
         description: 'Attempt to reverse the obfuscation of JavaScript code to make it more readable.',
         longDescription: "The JavaScript Deobfuscator is a tool that attempts to reverse the process of obfuscation, making the code easier to read and understand. Obfuscation is the process of making code difficult to read, typically by renaming variables, using complex expressions, and other techniques. A deobfuscator is essentially a beautifier that can handle the complex and often convoluted code produced by an obfuscator.",
-        component: lazy(() => import('@/components/tools/web-development/JavaScriptDeobfuscatorTool')),
+        component: lazy(() => import('../components/tools/web-development/JavaScriptDeobfuscatorTool')),
       },
       {
         slug: 'javascript-obfuscator',
@@ -452,7 +452,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JavaScript Obfuscator',
         description: 'Make your JavaScript code difficult to understand, protecting it from theft and reverse engineering.',
         longDescription: "The JavaScript Obfuscator is a tool that transforms your readable JavaScript code into a garbled, unreadable version that is extremely difficult for humans to understand. While the obfuscated code functions identically to the original, its logic is hidden, protecting your intellectual property from theft and reverse engineering. This is a crucial security measure for any web application that contains proprietary algorithms or sensitive business logic.",
-        component: lazy(() => import('@/components/tools/web-development/JavaScriptObfuscatorTool')),
+        component: lazy(() => import('../components/tools/web-development/JavaScriptObfuscatorTool')),
       },
       {
         slug: 'json-to-json-schema',
@@ -460,7 +460,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON to JSON Schema',
         description: 'Generate a JSON Schema from a JSON object.',
         longDescription: "The JSON to JSON Schema converter is a tool that automatically generates a JSON Schema from a given JSON object. JSON Schema is a powerful tool for validating the structure of JSON data. It allows you to define the expected data types, formats, and constraints for each field in a JSON object. This is incredibly useful for ensuring the quality and consistency of your data, especially when working with APIs or other data sources.",
-        component: lazy(() => import('@/components/tools/web-development/JsonToJsonSchemaTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonToJsonSchemaTool')),
       },
       {
         slug: 'json-viewer',
@@ -468,7 +468,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON Viewer',
         description: 'View JSON data in a readable, structured format.',
         longDescription: "The JSON Viewer is a tool that allows you to view JSON data in a readable, structured format. It takes raw JSON data and formats it with proper indentation and line breaks, making it easy to read and understand. This is essential for developers, data analysts, and anyone who works with JSON data, as it can be difficult to read in its raw, unformatted state.",
-        component: lazy(() => import('@/components/tools/web-development/JsonViewerTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonViewerTool')),
       },
       {
         slug: 'json-formatter',
@@ -476,7 +476,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON Formatter',
         description: 'Format messy JSON data to make it clean, readable, and well-structured.',
         longDescription: "The JSON Formatter is a tool that takes raw, unformatted, or minified JSON data and formats it with proper indentation and line breaks, making it easy to read and understand. This is essential for developers, data analysts, and anyone who works with JSON data, as it can be difficult to read in its raw, unformatted state.",
-        component: lazy(() => import('@/components/tools/web-development/JsonFormatterTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonFormatterTool')),
       },
       {
         slug: 'json-validator',
@@ -484,7 +484,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON Validator',
         description: 'Check whether a given piece of text is valid JSON.',
         longDescription: "The JSON Validator is a tool that checks whether a given piece of text is valid JSON. JSON (JavaScript Object Notation) has a strict syntax, and any deviation from this syntax will cause parsing errors. A validator ensures that your JSON data adheres to these rules, which is crucial for data interchange between different systems and applications.",
-        component: lazy(() => import('@/components/tools/web-development/JsonValidatorTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonValidatorTool')),
       },
       {
         slug: 'json-editor',
@@ -492,7 +492,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON Editor',
         description: 'Create, edit, and format JSON data in a user-friendly interface.',
         longDescription: "The JSON Editor is a tool that allows you to create, edit, and format JSON data in a user-friendly interface. It provides a structured view of the data, making it easy to navigate and modify complex JSON objects and arrays. This is essential for developers, data analysts, and anyone who works with JSON data, as it can be difficult to edit in its raw, unformatted state.",
-        component: lazy(() => import('@/components/tools/web-development/JsonEditorTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonEditorTool')),
       },
       {
         slug: 'json-minify',
@@ -500,7 +500,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON Minify',
         description: 'Reduce the file size of your JSON by removing unnecessary characters and whitespace.',
         longDescription: "The JSON Minifier is a tool that removes all unnecessary characters from JSON data without changing its functionality. This includes removing whitespace, comments, and other non-essential characters. The goal of minification is to reduce the file size of the JSON document, which leads to faster page load times. This is a crucial optimization technique for any website, as page speed is a key factor in both user experience and search engine rankings.",
-        component: lazy(() => import('@/components/tools/web-development/JsonMinifyTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonMinifyTool')),
       },
       {
         slug: 'xml-to-json-converter',
@@ -508,7 +508,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'XML to JSON Converter',
         description: 'Convert XML data to JSON format.',
         longDescription: "The XML to JSON Converter is a tool that transforms data from XML (eXtensible Markup Language) format to JSON (JavaScript Object Notation) format. While both are used for storing and transporting data, JSON is often preferred in modern web development for its simplicity and ease of use with JavaScript. This tool is essential for developers who need to work with data from different sources that use different formats.",
-        component: lazy(() => import('@/components/tools/web-development/XmlToJsonTool')),
+        component: lazy(() => import('../components/tools/web-development/XmlToJsonTool')),
       },
       {
         slug: 'csv-to-json-converter',
@@ -516,7 +516,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'CSV to JSON Converter',
         description: 'Convert CSV data to JSON format.',
         longDescription: "The CSV to JSON Converter is a tool that transforms data from CSV (Comma-Separated Values) format to JSON (JavaScript Object Notation) format. While both are used for storing and transporting data, JSON is often preferred in modern web development for its simplicity and ease of use with JavaScript. This tool is essential for developers who need to work with data from different sources that use different formats.",
-        component: lazy(() => import('@/components/tools/web-development/CsvToJsonTool')),
+        component: lazy(() => import('../components/tools/web-development/CsvToJsonTool')),
       },
       {
         slug: 'tsv-to-json-converter',
@@ -524,7 +524,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'TSV to JSON Converter',
         description: 'Convert TSV data to JSON format.',
         longDescription: "The TSV to JSON Converter is a tool that transforms data from TSV (Tab-Separated Values) format to JSON (JavaScript Object Notation) format. While both are used for storing and transporting data, JSON is often preferred in modern web development for its simplicity and ease of use with JavaScript. This tool is essential for developers who need to work with data from different sources that use different formats.",
-        component: lazy(() => import('@/components/tools/web-development/TsvToJsonTool')),
+        component: lazy(() => import('../components/tools/web-development/TsvToJsonTool')),
       },
       {
         slug: 'json-to-csv-converter',
@@ -532,7 +532,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON to CSV Converter',
         description: 'Convert JSON data to CSV format.',
         longDescription: "The JSON to CSV Converter is a tool that transforms data from JSON (JavaScript Object Notation) format to CSV (Comma-Separated Values) format. While JSON is often preferred in modern web development, CSV is still widely used in many other contexts, such as data analysis and spreadsheets. This tool is essential for developers who need to work with data from different sources that use different formats.",
-        component: lazy(() => import('@/components/tools/web-development/JsonToCsvTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonToCsvTool')),
       },
       {
         slug: 'json-to-text-converter',
@@ -540,7 +540,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON to Text Converter',
         description: 'Convert JSON data to a plain text format.',
         longDescription: "The JSON to Text Converter is a tool that transforms data from JSON (JavaScript Object Notation) format to a plain text format. This can be useful in a variety of situations where you need to extract the data from a JSON object and present it in a more human-readable format.",
-        component: lazy(() => import('@/components/tools/web-development/JsonToTextTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonToTextTool')),
       },
       {
         slug: 'json-to-tsv-converter',
@@ -548,7 +548,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON to TSV Converter',
         description: 'Convert JSON data to TSV format.',
         longDescription: "The JSON to TSV Converter is a tool that transforms data from JSON (JavaScript Object Notation) format to TSV (Tab-Separated Values) format. While JSON is often preferred in modern web development, TSV is still widely used in many other contexts, such as data analysis and spreadsheets. This tool is essential for developers who need to work with data from different sources that use different formats.",
-        component: lazy(() => import('@/components/tools/web-development/JsonToTsvTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonToTsvTool')),
       },
       {
         slug: 'json-to-xml-converter',
@@ -556,7 +556,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JSON to XML Converter',
         description: 'Convert JSON data to XML format.',
         longDescription: "The JSON to XML Converter is a tool that transforms data from JSON (JavaScript Object Notation) format to XML (eXtensible Markup Language) format. While JSON is often preferred in modern web development, XML is still widely used in many legacy systems and enterprise applications. This tool is essential for developers who need to work with data from different sources that use different formats.",
-        component: lazy(() => import('@/components/tools/web-development/JsonToXmlTool')),
+        component: lazy(() => import('../components/tools/web-development/JsonToXmlTool')),
       },
         // Image Editing Tools
       {
@@ -565,7 +565,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Image Converter',
         description: 'Convert images to and from various formats.',
         longDescription: "The Image Converter is a versatile tool that allows you to convert your images between a wide variety of formats. Whether you need to convert a PNG to a JPG, a WebP to a GIF, or any other combination, this tool provides a quick and easy way to do so. This is essential for web developers who need to optimize images for performance, designers who need to work with different file types, and anyone who needs to ensure their images are in the correct format for a specific application.",
-        component: lazy(() => import('@/components/tools/image/ImageConverterTool')),
+        component: lazy(() => import('../components/tools/image/ImageConverterTool')),
       },
       {
         slug: 'convert-to-ico',
@@ -573,7 +573,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Convert to ICO',
         description: 'Convert an image to the ICO format for use as a favicon.',
         longDescription: "The Convert to ICO tool is a specialized utility for creating favicons for your website. A favicon is the small icon that appears in the browser tab, and it is an important part of your site's branding. This tool allows you to convert any image into the ICO format, which is the standard format for favicons. You can also specify the desired size of the ICO file, ensuring that your favicon looks great on all devices.",
-        component: lazy(() => import('@/components/tools/image/ConvertToIcoTool')),
+        component: lazy(() => import('../components/tools/image/ConvertToIcoTool')),
       },
       {
         slug: 'image-to-base64-converter',
@@ -581,7 +581,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Image to Base64 Converter',
         description: 'Convert an image to a Base64 string.',
         longDescription: "The Image to Base64 Converter is a tool for web developers who need to embed images directly into their HTML or CSS files. Base64 is a method of encoding binary data as text, and it is often used to embed images in a way that avoids an extra HTTP request. This can improve the performance of your website, especially for small images. Our tool makes it easy to convert any image into a Base64 string that you can copy and paste into your code.",
-        component: lazy(() => import('@/components/tools/image/ImageToBase64ConverterTool')),
+        component: lazy(() => import('../components/tools/image/ImageToBase64ConverterTool')),
       },
       {
         slug: 'base64-to-image-converter',
@@ -589,7 +589,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Base64 to Image Converter',
         description: 'Convert a Base64 string to an image.',
         longDescription: "The Base64 to Image Converter is a tool for web developers who need to decode a Base64 string and see the image that it represents. This is useful for debugging, or for when you have a Base64 string and you want to save it as a regular image file. Our tool makes it easy to convert any Base64 string into an image that you can view and download.",
-        component: lazy(() => import('@/components/tools/image/Base64ToImageConverterTool')),
+        component: lazy(() => import('../components/tools/image/Base64ToImageConverterTool')),
       },
       {
         slug: 'flip-image',
@@ -597,7 +597,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Flip Image',
         description: 'Flip an image horizontally or vertically.',
         longDescription: "The Flip Image tool is a simple utility that allows you to flip an image horizontally or vertically. This can be useful for a variety of tasks, such as creating a mirror image effect or correcting the orientation of a photo. Our tool makes it easy to flip any image with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/FlipImageTool')),
+        component: lazy(() => import('../components/tools/image/FlipImageTool')),
       },
       {
         slug: 'rotate-image',
@@ -605,7 +605,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Rotate Image',
         description: 'Rotate an image by a specified number of degrees.',
         longDescription: "The Rotate Image tool is a simple utility that allows you to rotate an image by a specified number of degrees. This can be useful for a variety of tasks, such as correcting the orientation of a photo or creating a special effect. Our tool makes it easy to rotate any image with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/RotateImageTool')),
+        component: lazy(() => import('../components/tools/image/RotateImageTool')),
       },
       {
         slug: 'image-cropper',
@@ -613,7 +613,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Image Cropper',
         description: 'Crop an image to a specified size.',
         longDescription: "The Image Cropper is a tool that allows you to crop an image to a specified size. This is useful for a variety of tasks, such as removing unwanted parts of an image or preparing an image for a specific layout. Our tool makes it easy to crop any image with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/ImageCropperTool')),
+        component: lazy(() => import('../components/tools/image/ImageCropperTool')),
       },
       {
         slug: 'image-resizer',
@@ -621,7 +621,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Image Resizer',
         description: 'Resize an image to a specified width and height.',
         longDescription: "The Image Resizer is a tool that allows you to resize an image to a specified width and height. This is useful for a variety of tasks, such as preparing an image for a specific layout or reducing the file size of an image. Our tool makes it easy to resize any image with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/ImageResizerTool')),
+        component: lazy(() => import('../components/tools/image/ImageResizerTool')),
       },
       {
         slug: 'image-enlarger',
@@ -629,7 +629,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Image Enlarger',
         description: 'Enlarge an image without losing quality.',
         longDescription: "The Image Enlarger is a tool that allows you to enlarge an image without losing quality. This is useful for a variety of tasks, such as preparing an image for a specific layout or increasing the resolution of an image. Our tool makes it easy to enlarge any image with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/ImageEnlargerTool')),
+        component: lazy(() => import('../components/tools/image/ImageEnlargerTool')),
       },
       {
         slug: 'ico-to-png-converter',
@@ -637,7 +637,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'ICO to PNG Converter',
         description: 'Convert an ICO file to a PNG file.',
         longDescription: "The ICO to PNG Converter is a tool that allows you to convert an ICO file to a PNG file. This is useful for a variety of tasks, such as extracting an image from a favicon or converting an ICO file to a more widely supported format. Our tool makes it easy to convert any ICO file to a PNG file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/IcoToPngConverterTool')),
+        component: lazy(() => import('../components/tools/image/IcoToPngConverterTool')),
       },
       {
         slug: 'jpg-to-png-converter',
@@ -645,7 +645,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JPG to PNG Converter',
         description: 'Convert a JPG file to a PNG file.',
         longDescription: "The JPG to PNG Converter is a tool that allows you to convert a JPG file to a PNG file. This is useful for a variety of tasks, such as converting a photo to a format that supports transparency or preparing an image for a specific application. Our tool makes it easy to convert any JPG file to a PNG file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/JpgToPngConverterTool')),
+        component: lazy(() => import('../components/tools/image/JpgToPngConverterTool')),
       },
       {
         slug: 'png-to-jpg-converter',
@@ -653,7 +653,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'PNG to JPG Converter',
         description: 'Convert a PNG file to a JPG file.',
         longDescription: "The PNG to JPG Converter is a tool that allows you to convert a PNG file to a JPG file. This is useful for a variety of tasks, such as reducing the file size of an image or preparing an image for a specific application. Our tool makes it easy to convert any PNG file to a JPG file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/PngToJpgConverterTool')),
+        component: lazy(() => import('../components/tools/image/PngToJpgConverterTool')),
       },
       {
         slug: 'jpg-converter',
@@ -661,7 +661,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JPG Converter',
         description: 'Convert an image to the JPG format.',
         longDescription: "The JPG Converter is a tool that allows you to convert an image to the JPG format. This is useful for a variety of tasks, such as reducing the file size of an image or preparing an image for a specific application. Our tool makes it easy to convert any image to the JPG format with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/JpgConverterTool')),
+        component: lazy(() => import('../components/tools/image/JpgConverterTool')),
       },
       {
         slug: 'webp-to-jpg-converter',
@@ -669,7 +669,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'WebP to JPG Converter',
         description: 'Convert a WebP file to a JPG file.',
         longDescription: "The WebP to JPG Converter is a tool that allows you to convert a WebP file to a JPG file. This is useful for a variety of tasks, such as converting a modern image format to a more widely supported format or preparing an image for a specific application. Our tool makes it easy to convert any WebP file to a JPG file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/WebpToJpgConverterTool')),
+        component: lazy(() => import('../components/tools/image/WebpToJpgConverterTool')),
       },
       {
         slug: 'png-to-webp-converter',
@@ -677,7 +677,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'PNG to WebP Converter',
         description: 'Convert a PNG file to a WebP file.',
         longDescription: "The PNG to WebP Converter is a tool that allows you to convert a PNG file to a WebP file. This is useful for a variety of tasks, such as reducing the file size of an image or preparing an image for a specific application. Our tool makes it easy to convert any PNG file to a WebP file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/PngToWebpConverterTool')),
+        component: lazy(() => import('../components/tools/image/PngToWebpConverterTool')),
       },
       {
         slug: 'png-to-bmp-converter',
@@ -685,7 +685,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'PNG to BMP Converter',
         description: 'Convert a PNG file to a BMP file.',
         longDescription: "The PNG to BMP Converter is a tool that allows you to convert a PNG file to a BMP file. This is useful for a variety of tasks, such as converting an image to a format that is supported by older applications or preparing an image for a specific application. Our tool makes it easy to convert any PNG file to a BMP file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/PngToBmpConverterTool')),
+        component: lazy(() => import('../components/tools/image/PngToBmpConverterTool')),
       },
       {
         slug: 'png-to-gif-converter',
@@ -693,7 +693,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'PNG to GIF Converter',
         description: 'Convert a PNG file to a GIF file.',
         longDescription: "The PNG to GIF Converter is a tool that allows you to convert a PNG file to a GIF file. This is useful for a variety of tasks, such as creating an animated GIF from a series of PNG images or preparing an image for a specific application. Our tool makes it easy to convert any PNG file to a GIF file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/PngToGifConverterTool')),
+        component: lazy(() => import('../components/tools/image/PngToGifConverterTool')),
       },
       {
         slug: 'png-to-ico-converter',
@@ -701,7 +701,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'PNG to ICO Converter',
         description: 'Convert a PNG file to an ICO file.',
         longDescription: "The PNG to ICO Converter is a tool that allows you to convert a PNG file to an ICO file. This is useful for a variety of tasks, such as creating a favicon for your website or preparing an image for a specific application. Our tool makes it easy to convert any PNG file to an ICO file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/PngToIcoConverterTool')),
+        component: lazy(() => import('../components/tools/image/PngToIcoConverterTool')),
       },
       {
         slug: 'jpg-to-webp-converter',
@@ -709,7 +709,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JPG to WebP Converter',
         description: 'Convert a JPG file to a WebP file.',
         longDescription: "The JPG to WebP Converter is a tool that allows you to convert a JPG file to a WebP file. This is useful for a variety of tasks, such as reducing the file size of an image or preparing an image for a specific application. Our tool makes it easy to convert any JPG file to a WebP file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/JpgToWebpConverterTool')),
+        component: lazy(() => import('../components/tools/image/JpgToWebpConverterTool')),
       },
       {
         slug: 'jpg-to-bmp-converter',
@@ -717,7 +717,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JPG to BMP Converter',
         description: 'Convert a JPG file to a BMP file.',
         longDescription: "The JPG to BMP Converter is a tool that allows you to convert a JPG file to a BMP file. This is useful for a variety of tasks, such as converting an image to a format that is supported by older applications or preparing an image for a specific application. Our tool makes it easy to convert any JPG file to a BMP file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/JpgToBmpConverterTool')),
+        component: lazy(() => import('../components/tools/image/JpgToBmpConverterTool')),
       },
       {
         slug: 'jpg-to-gif-converter',
@@ -725,7 +725,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JPG to GIF Converter',
         description: 'Convert a JPG file to a GIF file.',
         longDescription: "The JPG to GIF Converter is a tool that allows you to convert a JPG file to a GIF file. This is useful for a variety of tasks, such as creating an animated GIF from a series of JPG images or preparing an image for a specific application. Our tool makes it easy to convert any JPG file to a GIF file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/JpgToGifConverterTool')),
+        component: lazy(() => import('../components/tools/image/JpgToGifConverterTool')),
       },
       {
         slug: 'jpg-to-ico-converter',
@@ -733,7 +733,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'JPG to ICO Converter',
         description: 'Convert a JPG file to an ICO file.',
         longDescription: "The JPG to ICO Converter is a tool that allows you to convert a JPG file to an ICO file. This is useful for a variety of tasks, such as creating a favicon for your website or preparing an image for a specific application. Our tool makes it easy to convert any JPG file to an ICO file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/JpgToIcoConverterTool')),
+        component: lazy(() => import('../components/tools/image/JpgToIcoConverterTool')),
       },
       {
         slug: 'webp-to-png-converter',
@@ -741,7 +741,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'WebP to PNG Converter',
         description: 'Convert a WebP file to a PNG file.',
         longDescription: "The WebP to PNG Converter is a tool that allows you to convert a WebP file to a PNG file. This is useful for a variety of tasks, such as converting a modern image format to a more widely supported format or preparing an image for a specific application. Our tool makes it easy to convert any WebP file to a PNG file with just a few clicks.",
-        component: lazy(() => import('@/components/tools/image/WebpToPngConverterTool')),
+        component: lazy(() => import('../components/tools/image/WebpToPngConverterTool')),
       },
       // Online Calculators
       {
@@ -750,7 +750,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Adsense Calculator',
         description: 'Estimate your potential AdSense earnings based on page views, CTR, and CPC.',
         longDescription: "The Adsense Calculator is a tool for publishers to estimate their potential earnings from Google AdSense. By inputting metrics like page views, click-through rate (CTR), and cost per click (CPC), you can get a clearer picture of your revenue potential.",
-        component: lazy(() => import('@/components/tools/online-calculators/AdsenseCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/AdsenseCalculatorTool')),
       },
       {
         slug: 'age-calculator',
@@ -758,7 +758,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Age Calculator',
         description: 'Calculate your age based on your birth date.',
         longDescription: "The Age Calculator is a simple tool that allows you to calculate your age based on your birth date. This can be useful for a variety of tasks, such as filling out forms or just for fun.",
-        component: lazy(() => import('@/components/tools/online-calculators/AgeCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/AgeCalculatorTool')),
       },
       {
         slug: 'percentage-calculator',
@@ -766,7 +766,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Percentage Calculator',
         description: 'Calculate the percentage of a number.',
         longDescription: "The Percentage Calculator is a simple tool that allows you to calculate the percentage of a number. This can be useful for a variety of tasks, such as calculating a tip or a discount.",
-        component: lazy(() => import('@/components/tools/online-calculators/PercentageCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/PercentageCalculatorTool')),
       },
       {
         slug: 'average-calculator',
@@ -774,7 +774,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Average Calculator',
         description: 'Calculate the average of a list of numbers.',
         longDescription: "The Average Calculator is a simple tool that allows you to calculate the average of a list of numbers. This can be useful for a variety of tasks, such as calculating your grade in a class or your average sales per day.",
-        component: lazy(() => import('@/components/tools/online-calculators/AverageCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/AverageCalculatorTool')),
       },
       {
         slug: 'confidence-interval-calculator',
@@ -782,7 +782,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Confidence Interval Calculator',
         description: 'Calculate the confidence interval for a sample.',
         longDescription: "The Confidence Interval Calculator is a tool for statisticians and data analysts to calculate the confidence interval for a sample. This is a key metric in inferential statistics, providing a range of values that is likely to contain a population parameter.",
-        component: lazy(() => import('@/components/tools/online-calculators/ConfidenceIntervalCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/ConfidenceIntervalCalculatorTool')),
       },
       {
         slug: 'sales-tax-calculator',
@@ -790,7 +790,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Sales Tax Calculator',
         description: 'Calculate the total price including sales tax.',
         longDescription: "The Sales Tax Calculator is a simple tool that allows you to calculate the total price of an item including sales tax. This can be useful for a variety of tasks, such as budgeting for a purchase or creating an invoice.",
-        component: lazy(() => import('@/components/tools/online-calculators/SalesTaxCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/SalesTaxCalculatorTool')),
       },
       {
         slug: 'margin-calculator',
@@ -798,7 +798,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Margin Calculator',
         description: 'Calculate the profit margin of a product.',
         longDescription: "The Margin Calculator is a tool for business owners and entrepreneurs to calculate the profit margin of a product. This is a key metric for determining the profitability of a product and for making pricing decisions.",
-        component: lazy(() => import('@/components/tools/online-calculators/MarginCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/MarginCalculatorTool')),
       },
       {
         slug: 'probability-calculator',
@@ -806,7 +806,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Probability Calculator',
         description: 'Calculate the probability of an event.',
         longDescription: "The Probability Calculator is a tool for students and professionals to calculate the probability of an event. This is a fundamental concept in statistics and can be used in a wide variety of applications.",
-        component: lazy(() => import('@/components/tools/online-calculators/ProbabilityCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/ProbabilityCalculatorTool')),
       },
       {
         slug: 'paypal-fee-calculator',
@@ -814,7 +814,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Paypal Fee Calculator',
         description: 'Estimate the PayPal fee for a transaction.',
         longDescription: "The Paypal Fee Calculator is a tool for online sellers to estimate the PayPal fee for a transaction. This is a key metric for determining the profitability of a sale and for making pricing decisions.",
-        component: lazy(() => import('@/components/tools/online-calculators/PaypalFeeCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/PaypalFeeCalculatorTool')),
       },
       {
         slug: 'discount-calculator',
@@ -822,7 +822,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Discount Calculator',
         description: 'Calculate the final price after a discount.',
         longDescription: "The Discount Calculator is a simple tool that allows you to calculate the final price of an item after a discount. This can be useful for a variety of tasks, such as determining the final price of an item on sale or creating a coupon.",
-        component: lazy(() => import('@/components/tools/online-calculators/DiscountCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/DiscountCalculatorTool')),
       },
       {
         slug: 'cpm-calculator',
@@ -830,7 +830,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'CPM Calculator',
         description: 'Calculate the Cost Per Mille (CPM) for your campaigns.',
         longDescription: "The CPM Calculator is a tool for advertisers and marketers to calculate the Cost Per Mille (CPM) for their campaigns. This is a key metric for determining the cost-effectiveness of an advertising campaign.",
-        component: lazy(() => import('@/components/tools/online-calculators/CpmCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/CpmCalculatorTool')),
       },
       {
         slug: 'loan-calculator',
@@ -838,7 +838,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Loan Calculator',
         description: 'Estimate your monthly loan payments.',
         longDescription: "The Loan Calculator is a tool for individuals and businesses to estimate their monthly loan payments. This is a key metric for determining the affordability of a loan and for making borrowing decisions.",
-        component: lazy(() => import('@/components/tools/online-calculators/LoanCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/LoanCalculatorTool')),
       },
       {
         slug: 'gst-calculator',
@@ -846,7 +846,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'GST Calculator',
         description: 'Calculate the total price including GST.',
         longDescription: "The GST Calculator is a simple tool that allows you to calculate the total price of an item including GST. This can be useful for a variety of tasks, such as budgeting for a purchase or creating an invoice.",
-        component: lazy(() => import('@/components/tools/online-calculators/GstCalculatorTool')),
+        component: lazy(() => import('../components/tools/online-calculators/GstCalculatorTool')),
       },
       // Unit Converter Tools
       {
@@ -855,7 +855,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Length Converter',
         description: 'Convert between different units of length.',
         longDescription: "The Length Converter is a tool that allows you to convert a measurement of length from one unit to another. This is useful in a wide variety of situations, from everyday tasks to scientific and engineering applications. Whether you need to convert meters to feet, miles to kilometers, or any other combination of length units, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/LengthConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/LengthConverterTool')),
       },
       {
         slug: 'area-converter',
@@ -863,7 +863,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Area Converter',
         description: 'Convert between different units of area.',
         longDescription: "An Area Converter is a tool that allows you to convert a measurement of area from one unit to another. This is useful in a wide variety of situations, from real estate and construction to agriculture and urban planning. Whether you need to convert square meters to square feet, acres to hectares, or any other combination of area units, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/AreaConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/AreaConverterTool')),
       },
       {
         slug: 'weight-converter',
@@ -871,7 +871,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Weight Converter',
         description: 'Convert between different units of weight.',
         longDescription: "A Weight Converter is a tool that allows you to convert a measurement of weight from one unit to another. This is useful in a wide variety of situations, from cooking and baking to shipping and logistics. Whether you need to convert grams to ounces, pounds to kilograms, or any other combination of weight units, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/WeightConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/WeightConverterTool')),
       },
       {
         slug: 'volume-converter',
@@ -879,7 +879,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Volume Converter',
         description: 'Convert between different units of volume.',
         longDescription: "A Volume Converter is a tool that allows you to convert a measurement of volume from one unit to another. This is useful in a wide variety of situations, from cooking and baking to scientific experiments and industrial applications. Whether you need to convert liters to gallons, milliliters to fluid ounces, or any other combination of volume units, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/VolumeConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/VolumeConverterTool')),
       },
       {
         slug: 'temperature-converter',
@@ -887,7 +887,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Temperature Converter',
         description: 'Convert between different units of temperature.',
         longDescription: "A Temperature Converter is a tool that allows you to convert a measurement of temperature from one unit to another. This is useful in a wide variety of situations, from cooking and weather forecasting to scientific and engineering applications. Whether you need to convert Celsius to Fahrenheit, Kelvin to Celsius, or any other combination of temperature units, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/TemperatureConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/TemperatureConverterTool')),
       },
       {
         slug: 'torque-converter',
@@ -895,7 +895,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Torque Converter',
         description: 'Convert between different units of torque.',
         longDescription: "A Torque Converter is a tool that allows you to convert a measurement of torque from one unit to another. This is useful in a wide variety of situations, particularly in mechanical engineering and automotive applications. Whether you need to convert Newton-meters to foot-pounds, or any other combination of torque units, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/TorqueConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/TorqueConverterTool')),
       },
       {
         slug: 'charge-converter',
@@ -903,7 +903,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Charge Converter',
         description: 'Convert between different units of electric charge.',
         longDescription: "A Charge Converter is a tool that allows you to convert a measurement of electric charge from one unit to another. This is useful in a wide variety of situations, particularly in physics and electrical engineering. Whether you need to convert coulombs to millicoulombs, or any other combination of charge units, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/ChargeConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/ChargeConverterTool')),
       },
       {
         slug: 'number-to-roman-converter',
@@ -911,7 +911,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Number to Roman Numerals',
         description: 'Convert a number to Roman numerals.',
         longDescription: "A Number to Roman Numerals Converter is a tool that allows you to convert a standard Arabic number into its Roman numeral equivalent. This is useful for a variety of applications, from historical and academic purposes to creative and decorative uses. Whether you need to write a date in Roman numerals for a formal document or are simply curious about how a number is represented in this ancient system, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/NumberToRomanConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/NumberToRomanConverterTool')),
       },
       {
         slug: 'roman-to-number-converter',
@@ -919,7 +919,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Roman Numerals to Number',
         description: 'Convert Roman numerals to a number.',
         longDescription: "A Roman Numerals to Number Converter is a tool that allows you to convert a Roman numeral into its standard Arabic number equivalent. This is useful for a variety of applications, from historical and academic purposes to creative and decorative uses. Whether you need to decipher a date on a monument or are simply curious about the value of a Roman numeral, this tool provides a quick and accurate way to do so.",
-        component: lazy(() => import('@/components/tools/unit-converters/RomanToNumberConverterTool')),
+        component: lazy(() => import('../components/tools/unit-converters/RomanToNumberConverterTool')),
       },
       // Text Tools
       {
@@ -928,7 +928,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Word Counter',
         description: 'Count words, characters, sentences, and paragraphs in your text.',
         longDescription: "The Word Counter is an essential tool for writers, students, and anyone who works with text. It provides a quick and accurate analysis of your content, helping you meet word count requirements for essays, articles, social media posts, and more.",
-        component: lazy(() => import('@/components/tools/text/WordCounterTool')),
+        component: lazy(() => import('../components/tools/text/WordCounterTool')),
       },
       {
         slug: 'case-converter',
@@ -936,7 +936,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Case Converter',
         description: 'Convert text between uppercase, lowercase, title case, and more.',
         longDescription: "The Case Converter is an essential tool for anyone who works with text, providing a quick and easy way to change the capitalization of your words. Whether you're a writer, a student, a programmer, or a social media manager, this tool will save you time and help you maintain a consistent and professional look across all your content.",
-        component: lazy(() => import('@/components/tools/text/CaseConverterTool')),
+        component: lazy(() => import('../components/tools/text/CaseConverterTool')),
       },
       {
         slug: 'article-rewriter',
@@ -944,7 +944,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Article Rewriter',
         description: 'Rewrite articles and text to create unique content.',
         longDescription: "The Article Rewriter is a powerful tool that can help you create unique content from existing articles. Whether you're a content creator looking to repurpose your old blog posts or a student who needs to paraphrase a source for a research paper, this tool can help you get the job done quickly and easily.",
-        component: lazy(() => import('@/components/tools/text/ArticleRewriterTool')),
+        component: lazy(() => import('../components/tools/text/ArticleRewriterTool')),
       },
       {
         slug: 'backwards-text-generator',
@@ -952,7 +952,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Backwards Text Generator',
         description: 'Reverse your text for fun or for use in social media posts.',
         longDescription: "The Backwards Text Generator is a fun and easy way to reverse your text. Whether you want to create a unique social media post or just have some fun with your friends, this tool can help you do it.",
-        component: lazy(() => import('@/components/tools/text/BackwardsTextGeneratorTool')),
+        component: lazy(() => import('../components/tools/text/BackwardsTextGeneratorTool')),
       },
       {
         slug: 'text-to-hashtags-converter',
@@ -960,7 +960,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Text to Hashtags Converter',
         description: 'Convert your text into a list of hashtags for social media.',
         longDescription: "The Text to Hashtags Converter is a simple tool that helps you generate a list of hashtags from your text. This can be a great way to increase the visibility of your social media posts and reach a wider audience.",
-        component: lazy(() => import('@/components/tools/text/TextToHashtagsConverterTool')),
+        component: lazy(() => import('../components/tools/text/TextToHashtagsConverterTool')),
       },
       {
         slug: 'text-compare',
@@ -968,7 +968,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Text Compare',
         description: 'Compare two texts to find the differences.',
         longDescription: "The Text Compare tool is a simple utility that allows you to compare two texts to see if they are identical. This can be useful for a variety of tasks, such as checking for plagiarism or comparing two versions of a document.",
-        component: lazy(() => import('@/components/tools/text/TextCompareTool')),
+        component: lazy(() => import('../components/tools/text/TextCompareTool')),
       },
       {
         slug: 'text-to-slug-converter',
@@ -976,7 +976,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Text to Slug Converter',
         description: 'Convert your text into a URL-friendly slug.',
         longDescription: "The Text to Slug Converter is a simple tool that helps you convert your text into a URL-friendly slug. This can be useful for creating clean and readable URLs for your blog posts, articles, and other web pages.",
-        component: lazy(() => import('@/components/tools/text/TextToSlugConverterTool')),
+        component: lazy(() => import('../components/tools/text/TextToSlugConverterTool')),
       },
       {
         slug: 'lorem-ipsum-generator',
@@ -984,7 +984,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Lorem Ipsum Generator',
         description: 'Generate placeholder text for your designs and mockups.',
         longDescription: "The Lorem Ipsum Generator is a simple tool that helps you generate placeholder text for your designs and mockups. This can be useful when you need to see how a design will look with text, but you don't have the final copy yet.",
-        component: lazy(() => import('@/components/tools/text/LoremIpsumGeneratorTool')),
+        component: lazy(() => import('../components/tools/text/LoremIpsumGeneratorTool')),
       },
       {
         slug: 'remove-line-breaks',
@@ -992,7 +992,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Remove Line Breaks',
         description: 'Remove all line breaks from a block of text.',
         longDescription: "The Remove Line Breaks tool is a simple utility that allows you to remove all line breaks from a block of text. This can be useful for a variety of tasks, such as cleaning up text that has been copied from a PDF or a website.",
-        component: lazy(() => import('@/components/tools/text/RemoveLineBreaksTool')),
+        component: lazy(() => import('../components/tools/text/RemoveLineBreaksTool')),
       },
       {
         slug: 'random-word-generator',
@@ -1000,7 +1000,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Random Word Generator',
         description: 'Generate a list of random words.',
         longDescription: "The Random Word Generator is a simple tool that helps you generate a list of random words. This can be useful for a variety of tasks, such as brainstorming ideas, creating unique passwords, or playing word games.",
-        component: lazy(() => import('@/components/tools/text/RandomWordGeneratorTool')),
+        component: lazy(() => import('../components/tools/text/RandomWordGeneratorTool')),
       },
       {
         slug: 'text-repeater',
@@ -1008,7 +1008,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Text Repeater',
         description: 'Repeat a piece of text a specified number of times.',
         longDescription: "The Text Repeater is a simple tool that allows you to repeat a piece of text a specified number of times. This can be useful for a variety of tasks, such as creating a long string of text for testing purposes or creating a fun social media post.",
-        component: lazy(() => import('@/components/tools/text/TextRepeaterTool')),
+        component: lazy(() => import('../components/tools/text/TextRepeaterTool')),
       },
       {
         slug: 'text-sorter',
@@ -1016,7 +1016,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Text Sorter',
         description: 'Sort lines of text alphabetically.',
         longDescription: "The Text Sorter is a simple tool that allows you to sort lines of text alphabetically. This can be useful for a variety of tasks, such as organizing a list of names or sorting a list of URLs.",
-        component: lazy(() => import('@/components/tools/text/TextSorterTool')),
+        component: lazy(() => import('../components/tools/text/TextSorterTool')),
       },
       {
         slug: 'comma-separator',
@@ -1024,7 +1024,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Comma Separator',
         description: 'Separate items in a list with commas.',
         longDescription: "The Comma Separator is a simple tool that allows you to separate items in a list with commas. This can be useful for a variety of tasks, such as creating a list of keywords for a blog post or a list of email addresses for a newsletter.",
-        component: lazy(() => import('@/components/tools/text/CommaSeparatorTool')),
+        component: lazy(() => import('../components/tools/text/CommaSeparatorTool')),
       },
       {
         slug: 'number-to-word-converter',
@@ -1032,7 +1032,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Number to Word Converter',
         description: 'Convert numbers to words.',
         longDescription: "The Number to Word Converter is a simple tool that allows you to convert numbers to words. This can be useful for a variety of tasks, such as writing checks or creating invoices.",
-        component: lazy(() => import('@/components/tools/text/NumberToWordConverterTool')),
+        component: lazy(() => import('../components/tools/text/NumberToWordConverterTool')),
       },
       {
         slug: 'word-to-number-converter',
@@ -1040,7 +1040,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Word to Number Converter',
         description: 'Convert words to numbers.',
         longDescription: "The Word to Number Converter is a simple tool that allows you to convert words to numbers. This can be useful for a variety of tasks, such as converting a written out number to a numerical value.",
-        component: lazy(() => import('@/components/tools/text/WordToNumberConverterTool')),
+        component: lazy(() => import('../components/tools/text/WordToNumberConverterTool')),
       },
       {
         slug: 'text-to-tags-converter',
@@ -1048,7 +1048,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Text to Tags Converter',
         description: 'Convert your text into a list of tags for your blog or website.',
         longDescription: "The Text to Tags Converter is a simple tool that helps you generate a list of tags from your text. This can be a great way to improve the SEO of your blog posts and articles.",
-        component: lazy(() => import('@/components/tools/text/TextToTagsConverterTool')),
+        component: lazy(() => import('../components/tools/text/TextToTagsConverterTool')),
       },
       // YouTube Tools
       {
@@ -1057,7 +1057,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Tag Extractor',
         description: 'Extract and view all the meta tags from any public YouTube video.',
         longDescription: "Unlock the secrets behind successful YouTube videos with our YouTube Tag Extractor. Tags are a crucial element of YouTube's discovery algorithm, helping it understand what your video is about and who to show it to. By analyzing the tags of popular videos in your niche, you can gain valuable insights into effective keyword strategies. This tool is essential for any creator looking to improve their video SEO and gain a competitive edge.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeTagExtractorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeTagExtractorTool')),
       },
       {
         slug: 'youtube-tag-generator',
@@ -1065,7 +1065,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Tag Generator',
         description: 'Generate SEO-optimized YouTube tags for your videos based on a keyword.',
         longDescription: "Struggling to find the right tags for your YouTube videos? Our YouTube Tag Generator helps you create a list of relevant, high-impact tags to boost your video's discoverability. Proper tagging is essential for YouTube SEO, as it helps the algorithm categorize your content and recommend it to the right viewers.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeTagGeneratorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeTagGeneratorTool')),
       },
       {
         slug: 'youtube-hashtag-extractor',
@@ -1073,7 +1073,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Hashtag Extractor',
         description: 'Extract all hashtags from a YouTube video\'s title and description.',
         longDescription: "Hashtags are a powerful feature on YouTube, appearing above the video title and in the description, making your content more discoverable. Our YouTube Hashtag Extractor allows you to quickly pull all hashtags used in any video. This is an excellent way to research competitor strategies and understand how they are leveraging hashtags for visibility.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeHashtagExtractorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeHashtagExtractorTool')),
       },
       {
         slug: 'youtube-hashtag-generator',
@@ -1081,7 +1081,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Hashtag Generator',
         description: 'Generate relevant and trending hashtags for your YouTube videos.',
         longDescription: "Boost your video's reach with our YouTube Hashtag Generator. This tool helps you find the most effective hashtags related to your video's topic. Using the right hashtags can get your video featured on hashtag-specific pages, increasing its exposure to viewers interested in that subject.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeHashtagGeneratorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeHashtagGeneratorTool')),
       },
       {
         slug: 'youtube-title-extractor',
@@ -1089,7 +1089,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Title Extractor',
         description: 'Easily extract the full title from any YouTube video.',
         longDescription: "A video's title is one of the most critical factors for attracting viewers and ranking in search. Our YouTube Title Extractor lets you instantly grab the exact title of any video. This is useful for research, content analysis, or when you need to reference a video accurately.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeTitleExtractorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeTitleExtractorTool')),
       },
       {
         slug: 'youtube-title-generator',
@@ -1097,7 +1097,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Title Generator',
         description: 'Generate catchy, clickable, and SEO-friendly titles for your videos.',
         longDescription: "Crafting the perfect title can be challenging. Our YouTube Title Generator is designed to spark your creativity and help you write titles that get clicks. A great title is a promise to the viewer, and it needs to be compelling and accurate.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeTitleGeneratorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeTitleGeneratorTool')),
       },
       {
         slug: 'youtube-title-length-checker',
@@ -1105,7 +1105,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Title Length Checker',
         description: 'Ensure your video titles are not truncated in search results and suggestions.',
         longDescription: "Is your YouTube title too long? Titles that are too lengthy get cut off (truncated) in search results, on the homepage, and in suggested video feeds. This can hurt your click-through rate (CTR) as viewers can't read the full title. Our YouTube Title Length Checker helps you write titles that fit perfectly.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeTitleLengthCheckerTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeTitleLengthCheckerTool')),
       },
       {
         slug: 'youtube-description-extractor',
@@ -1113,7 +1113,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Description Extractor',
         description: 'Extract and view the full description of any YouTube video.',
         longDescription: "The YouTube description is a goldmine of information. It contains links, timestamps, affiliate disclosures, and detailed information that complements the video. Our YouTube Description Extractor allows you to easily copy the entire description from any video for your analysis.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeDescriptionExtractorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeDescriptionExtractorTool')),
       },
       {
         slug: 'youtube-description-generator',
@@ -1121,7 +1121,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Description Generator',
         description: 'Create well-structured, SEO-friendly descriptions for your videos.',
         longDescription: "Writing a good YouTube description is crucial for SEO and viewer engagement. It helps YouTube understand your video's context and provides viewers with valuable information. Our YouTube Description Generator provides a template to help you craft the perfect description every time.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeDescriptionGeneratorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeDescriptionGeneratorTool')),
       },
       {
         slug: 'youtube-embed-code-generator',
@@ -1129,7 +1129,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Embed Code Generator',
         description: 'Generate custom HTML embed codes for your YouTube videos.',
         longDescription: "Want to embed a YouTube video on your website or blog? Our YouTube Embed Code Generator gives you more control than the standard YouTube embed option. You can customize the player size, start time, and other parameters to create a seamless experience for your visitors.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeEmbedCodeGeneratorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeEmbedCodeGeneratorTool')),
       },
       {
         slug: 'youtube-channel-id-extractor',
@@ -1137,7 +1137,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Channel ID Extractor',
         description: 'Quickly find the unique Channel ID for any YouTube channel.',
         longDescription: "Every YouTube channel has a unique Channel ID (e.g., UC_x5XG1OV2P6uZZ5FSM9Ttw), which is often required for third-party apps, analytics tools, and API integrations. Finding this ID can sometimes be tricky, especially with channels using custom URLs. Our tool makes it simple.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeChannelIDExtractorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeChannelIDExtractorTool')),
       },
       {
         slug: 'youtube-video-statistics',
@@ -1145,7 +1145,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Video Statistics',
         description: 'View detailed statistics for any public YouTube video.',
         longDescription: "Get an in-depth look at the performance of any public YouTube video. Our YouTube Video Statistics tool provides key metrics that go beyond the public view count. This is invaluable for competitor analysis and understanding what makes a video successful.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeVideoStatisticsTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeVideoStatisticsTool')),
       },
       {
         slug: 'youtube-channel-statistics',
@@ -1153,7 +1153,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Channel Statistics',
         description: 'Analyze the overall performance and growth of any YouTube channel.',
         longDescription: "Our YouTube Channel Statistics tool gives you a high-level overview of any public channel's performance. Track your own growth, analyze competitors to benchmark your progress, or research potential influencers for marketing campaigns. Understanding channel-wide trends is key to building a long-term, successful YouTube presence.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeChannelStatisticsTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeChannelStatisticsTool')),
       },
       {
         slug: 'youtube-region-restriction-checker',
@@ -1161,7 +1161,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Region Restriction Checker',
         description: 'Check if a YouTube video is blocked or restricted in certain countries.',
         longDescription: "Have you everencountered the frustrating message \"This video is not available in your country\"? Content creators or copyright holders can restrict access to their videos in specific regions, a practice known as geo-blocking. Our YouTube Region Restriction Checker lets you see exactly where a video is available and where it's blocked.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeRegionRestrictionCheckerTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeRegionRestrictionCheckerTool')),
       },
       {
         slug: 'youtube-channel-logo-downloader',
@@ -1169,7 +1169,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Channel Logo Downloader',
         description: 'Download the profile picture (logo) of any YouTube channel in high quality.',
         longDescription: "Need to download a YouTube channel's logo for a presentation, review, or analysis? Our YouTube Channel Logo Downloader makes it easy. You can get a high-resolution version of any channel's profile picture with just a few clicks.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeChannelLogoDownloaderTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeChannelLogoDownloaderTool')),
       },
       {
         slug: 'youtube-channel-banner-downloader',
@@ -1177,7 +1177,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Channel Banner Downloader',
         description: 'Download the full-size channel art (banner) from any YouTube channel.',
         longDescription: "A YouTube channel's banner is a key piece of its branding. Our Channel Banner Downloader tool allows you to download the high-resolution channel art from any YouTube page. This is perfect for designers seeking inspiration or for analysts studying branding strategies.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeChannelBannerDownloaderTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeChannelBannerDownloaderTool')),
       },
       {
         slug: 'youtube-channel-finder',
@@ -1185,7 +1185,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Channel Finder',
         description: 'Search for YouTube channels based on keywords, topics, or names.',
         longDescription: "Looking for channels in a specific niche? Our YouTube Channel Finder helps you discover new creators and influencers. Instead of just searching for videos, you can search specifically for channels that match your interests or research needs.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeChannelFinderTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeChannelFinderTool')),
       },
       {
         slug: 'youtube-thumbnail-downloader',
@@ -1193,7 +1193,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Thumbnail Downloader',
         description: 'Download the thumbnail image of any YouTube video in all available resolutions.',
         longDescription: "The thumbnail is arguably the most important marketing asset for a YouTube video. Our YouTube Thumbnail Downloader lets you grab the thumbnail image from any video quickly and easily. You can download it in various qualities, including High Definition (HD).",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeThumbnailDownloaderTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeThumbnailDownloaderTool')),
       },
       {
         slug: 'youtube-timestamp-link-generator',
@@ -1201,7 +1201,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Timestamp Link Generator',
         description: 'Create a YouTube link that starts playing at a specific time.',
         longDescription: "Want to share a specific moment in a YouTube video? A timestamp link is the perfect way to do it. Our YouTube Timestamp Link Generator makes creating these links effortless. Instead of manually adding parameters to the URL, you can do it with a simple interface. This is incredibly useful for long videos, tutorials, or when you want to highlight a particular section of a video.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeTimestampLinkGeneratorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeTimestampLinkGeneratorTool')),
       },
       {
         slug: 'youtube-subscribe-link-generator',
@@ -1209,7 +1209,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Subscribe Link Generator',
         description: 'Create a direct link that prompts users to subscribe to a channel.',
         longDescription: "Increase your subscriber conversion rate with a direct subscription link. Our YouTube Subscribe Link Generator creates a special URL that, when clicked, takes the user to your channel page and automatically opens the subscription confirmation pop-up. This reduces friction and makes it easier for viewers to subscribe.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeSubscribeLinkGeneratorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeSubscribeLinkGeneratorTool')),
       },
       {
         slug: 'youtube-money-calculator',
@@ -1217,7 +1217,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Money Calculator',
         description: 'Estimate the potential earnings of a YouTube video or channel.',
         longDescription: "Ever wondered how much a YouTuber earns? Our YouTube Money Calculator provides an estimated earnings range for a video or channel based on its view count and engagement. This tool is perfect for aspiring creators planning their content strategy, marketers assessing potential influencer collaborations, and curious viewers alike.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeMoneyCalculatorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeMoneyCalculatorTool')),
       },
       {
         slug: 'youtube-video-count-checker',
@@ -1225,7 +1225,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Video Count Checker',
         description: 'Find out the total number of public videos on any YouTube channel.',
         longDescription: "Quickly and accurately determine the total number of public videos a YouTube channel has uploaded. Our YouTube Video Count Checker provides this simple but useful metric in an instant. This is great for competitor analysis or for tracking a channel's content output over time.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeVideoCountCheckerTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeVideoCountCheckerTool')),
       },
       {
         slug: 'youtube-video-title-capitalizer',
@@ -1233,7 +1233,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Video Title Capitalizer',
         description: 'Properly capitalize your video titles using Title Case or Sentence case.',
         longDescription: "In the competitive world of YouTube, first impressions matter. A well-crafted video title is crucial for grabbing a viewer's attention, and proper capitalization plays a significant role in how professional and readable your title appears. Our YouTube Video Title Capitalizer tool is designed to help you effortlessly format your titles to meet standard conventions, ensuring your content looks polished and appealing in search results, suggested video feeds, and on your channel page.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeVideoTitleCapitalizerTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeVideoTitleCapitalizerTool')),
       },
       {
         slug: 'youtube-comment-picker',
@@ -1241,7 +1241,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Comment Picker',
         description: 'Randomly pick a winner from the comments of a YouTube video for a giveaway.',
         longDescription: "Running a giveaway or contest on your YouTube channel is a fantastic way to boost engagement, reward your audience, and grow your community. Our YouTube Comment Picker tool provides a fair, transparent, and easy way to select a random winner from the comments section of your video.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeCommentPickerTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeCommentPickerTool')),
       },
       {
         slug: 'youtube-views-ratio-calculator',
@@ -1249,7 +1249,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Views to Subscriber Ratio Calculator',
         description: 'Calculate the views-to-subscriber ratio for any YouTube channel.',
         longDescription: "Analyze the engagement of any YouTube channel by calculating its views-to-subscriber ratio. This powerful metric helps you understand how well a channel's content resonates with its audience.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeViewsRatioCalculatorTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeViewsRatioCalculatorTool')),
       },
       {
         slug: 'youtube-channel-age-checker',
@@ -1257,7 +1257,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'YouTube Channel Age Checker',
         description: 'Find out exactly when a YouTube channel was created.',
         longDescription: "Discover the creation date of any YouTube channel with our Channel Age Checker. This simple tool tells you how long a channel has been active on the platform. This information can be surprisingly useful for analysis and understanding a creator's journey.",
-        component: lazy(() => import('@/components/tools/youtube/YouTubeChannelAgeCheckerTool')),
+        component: lazy(() => import('../components/tools/youtube/YouTubeChannelAgeCheckerTool')),
       },
       // Domain & IP Tools
       {
@@ -1266,7 +1266,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Domain to IP Converter',
         description: 'Convert a domain name to its corresponding IP address.',
         longDescription: "The Domain to IP Converter is a fundamental tool for anyone working with the internet. It allows you to find the IP address of a domain name, which is the numerical address that computers use to communicate with each other. This can be useful for a variety of tasks, such as network troubleshooting, server administration, and web development.",
-        component: lazy(() => import('@/components/tools/domain/DomainToIpConverterTool')),
+        component: lazy(() => import('../components/tools/domain/DomainToIpConverterTool')),
       },
       {
         slug: 'domain-age-checker',
@@ -1274,7 +1274,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Domain Age Checker',
         description: 'Check the age of a domain name.',
         longDescription: "The Domain Age Checker is a simple tool that allows you to check the age of a domain name. This can be useful for a variety of tasks, such as evaluating the credibility of a website or checking the history of a domain.",
-        component: lazy(() => import('@/components/tools/domain/DomainAgeCheckerTool')),
+        component: lazy(() => import('../components/tools/domain/DomainAgeCheckerTool')),
       },
       {
         slug: 'whois-domain-lookup',
@@ -1282,7 +1282,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Whois Domain Lookup',
         description: 'Look up the registration information for a domain name.',
         longDescription: "The Whois Domain Lookup tool is a simple utility that allows you to look up the registration information for a domain name. This can be useful for a variety of tasks, such as finding the owner of a domain name or checking the expiration date of a domain.",
-        component: lazy(() => import('@/components/tools/domain/WhoisDomainLookupTool')),
+        component: lazy(() => import('../components/tools/domain/WhoisDomainLookupTool')),
       },
       {
         slug: 'hosting-checker',
@@ -1290,7 +1290,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Hosting Checker',
         description: 'Check who is hosting a website.',
         longDescription: "The Hosting Checker is a simple tool that allows you to check who is hosting a website. This can be useful for a variety of tasks, such as finding out who to contact about a website or checking the reputation of a hosting provider.",
-        component: lazy(() => import('@/components/tools/domain/HostingCheckerTool')),
+        component: lazy(() => import('../components/tools/domain/HostingCheckerTool')),
       },
       {
         slug: 'dns-records-checker',
@@ -1298,7 +1298,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'DNS Records Checker',
         description: 'Check the DNS records for a domain name.',
         longDescription: "The DNS Records Checker is a simple tool that allows you to check the DNS records for a domain name. This can be useful for a variety of tasks, such as troubleshooting email problems or verifying that your DNS records are set up correctly.",
-        component: lazy(() => import('@/components/tools/domain/DnsRecordsCheckerTool')),
+        component: lazy(() => import('../components/tools/domain/DnsRecordsCheckerTool')),
       },
       {
         slug: 'what-is-my-ip-address',
@@ -1306,7 +1306,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'What Is My IP Address',
         description: 'Find out your public IP address.',
         longDescription: "The What Is My IP Address tool is a simple utility that allows you to find out your public IP address. This can be useful for a variety of tasks, such as setting up a remote desktop connection or configuring a firewall.",
-        component: lazy(() => import('@/components/tools/domain/WhatIsMyIpAddressTool')),
+        component: lazy(() => import('../components/tools/domain/WhatIsMyIpAddressTool')),
       },
       {
         slug: 'ip-address-lookup',
@@ -1314,7 +1314,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'IP Address Lookup',
         description: 'Look up the location and other information for an IP address.',
         longDescription: "The IP Address Lookup tool is a simple utility that allows you to look up the location and other information for an IP address. This can be useful for a variety of tasks, such as finding out where a website is hosted or tracking the source of an email.",
-        component: lazy(() => import('@/components/tools/domain/IpAddressLookupTool')),
+        component: lazy(() => import('../components/tools/domain/IpAddressLookupTool')),
       },
       // Website Management Tools
       {
@@ -1323,7 +1323,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Robots.txt Generator',
         description: 'Generate a robots.txt file to control search engine crawlers.',
         longDescription: "The Robots.txt Generator is an essential tool for any website owner, providing a simple and effective way to control how search engine crawlers interact with your website. The robots.txt file is a powerful tool that can be used to improve your website's SEO performance, protect sensitive information, and optimize your crawl budget.\n\nA well-configured robots.txt file is a fundamental part of technical SEO. It allows you to specify which parts of your site should and should not be crawled by search engine bots. This is crucial for preventing the indexing of duplicate or unimportant pages, which can dilute your site's authority and waste your crawl budget. By guiding search engine crawlers to your most important content, you can ensure that your site is being indexed correctly and that your most valuable pages are being prioritized.\n\nThe Robots.txt Generator makes it easy to create a robots.txt file that is tailored to your specific needs. You can specify which user-agents you want to allow or disallow, which pages or directories you want to block, and whether you want to include a sitemap or a crawl-delay. The generator will then create a robots.txt file that you can upload to your website's root directory. By using our generator, you can be confident that your robots.txt file is correctly formatted and that it will be understood by all major search engines and other well-behaved web robots.\n\nThe Robots Exclusion Protocol, which is the standard that governs the use of robots.txt files, was created in 1994. It is a simple and voluntary protocol that has become an essential part of the web's infrastructure. The history of the Robots Exclusion Protocol is a fascinating story of how a simple idea has evolved to meet the ever-increasing demands of the modern web.",
-        component: lazy(() => import('@/components/tools/website/RobotsTxtGeneratorTool')),
+        component: lazy(() => import('../components/tools/website/RobotsTxtGeneratorTool')),
       },
       {
         slug: 'http-status-code-checker',
@@ -1331,7 +1331,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'HTTP Status Code Checker',
         description: 'Check the HTTP status code of any URL.',
         longDescription: "The HTTP Status Code Checker is an essential tool for anyone who manages a website. It provides a quick and easy way to check the HTTP status code of a URL, which is a three-digit number that indicates the status of a web page. By understanding the meaning of different status codes, you can diagnose and troubleshoot a wide range of website issues, from broken links to server errors.\n\nHTTP status codes are a crucial part of the communication between a web browser and a web server. They provide valuable information about the health and performance of your website, and they can have a significant impact on your user experience and search engine rankings. For example, a 404 \"Not Found\" error can frustrate users and hurt your SEO, while a 301 \"Moved Permanently\" redirect can help to preserve your link equity when you move a page to a new URL.\n\nOur HTTP Status Code Checker is designed to be as simple and intuitive as possible. Just enter the URL of the page that you want to check, and our tool will instantly display the HTTP status code, as well as the full redirect path if the URL is being redirected. This information can help you to identify and fix any issues with your website, ensuring that it is providing the best possible experience for your users and for search engines.",
-        component: lazy(() => import('@/components/tools/website/HttpStatusCodeCheckerTool')),
+        component: lazy(() => import('../components/tools/website/HttpStatusCodeCheckerTool')),
       },
       {
         slug: 'htaccess-redirect-generator',
@@ -1339,7 +1339,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: '.htaccess Redirect Generator',
         description: 'Generate .htaccess redirect code for your website.',
         longDescription: "The .htaccess Redirect Generator is an essential tool for any website owner who uses an Apache web server. It provides a simple and reliable way to generate the code needed to create URL redirects, without having to be an expert in Apache's mod_rewrite module. Redirects are a fundamental part of website management, and they are used in a wide variety of situations, from redirecting a single page to a new location to redirecting an entire domain.\n\nA well-implemented redirect strategy is crucial for both SEO and user experience. When you change the URL of a page, a 301 redirect tells search engines that the page has moved permanently, which ensures that the link equity from the old URL is transferred to the new one. This is essential for maintaining your search engine rankings. Redirects also prevent users from seeing 404 \"Not Found\" errors, which can be a frustrating experience.\n\nOur .htaccess Redirect Generator is designed to be as simple and intuitive as possible. Just select the type of redirect that you want to create, enter the old and new URLs, and our tool will generate the correct .htaccess code for you. You can then copy and paste the code into your .htaccess file. It's that easy!",
-        component: lazy(() => import('@/components/tools/website/HtaccessRedirectGeneratorTool')),
+        component: lazy(() => import('../components/tools/website/HtaccessRedirectGeneratorTool')),
       },
       {
         slug: 'server-status-checker',
@@ -1347,7 +1347,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Server Status Checker',
         description: "Check if a website's server is online and responding.",
         longDescription: "The Server Status Checker is a vital tool for ensuring your website is available to your users. It allows you to check the status of your web server to see if it is online and responding to requests. This is crucial for maintaining a reliable online presence, as downtime can lead to lost traffic, revenue, and user trust. By using this tool, you can quickly determine if an issue is on your end or with the user's connection. It's a first-line diagnostic tool for any website owner, helping you to act fast when your site is down.",
-        component: lazy(() => import('@/components/tools/website/ServerStatusCheckerTool')),
+        component: lazy(() => import('../components/tools/website/ServerStatusCheckerTool')),
       },
       {
         slug: 'get-http-headers',
@@ -1355,7 +1355,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Get HTTP Headers',
         description: 'Fetch and display the HTTP response headers for a given URL.',
         longDescription: "The Get HTTP Headers tool is a powerful utility for web developers, SEO analysts, and network administrators. It allows you to inspect the HTTP response headers that a web server sends back when a URL is requested. These headers contain a wealth of information about the server, the content, caching policies, and how the browser should handle the response. Understanding these headers is essential for debugging, optimizing performance, ensuring security, and verifying that redirects and canonical tags are implemented correctly. This tool provides a transparent look into the technical conversation happening between a browser and a server.",
-        component: lazy(() => import('@/components/tools/website/GetHttpHeadersTool')),
+        component: lazy(() => import('../components/tools/website/GetHttpHeadersTool')),
       },
       {
         slug: 'page-size-checker',
@@ -1363,7 +1363,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Page Size Checker',
         description: 'Determine the total size of a web page.',
         longDescription: "The Page Size Checker is an essential tool for web developers and SEOs who are focused on website performance. Page size is a critical factor in how quickly a web page loads, and a slow-loading page can have a significant negative impact on user experience and search engine rankings. This tool helps you determine the total size of a web page, including all of its assets, such as images, scripts, and stylesheets. By identifying large assets, you can take steps to optimize them, such as compressing images or minifying code, to improve your site's loading speed and Core Web Vitals scores.",
-        component: lazy(() => import('@/components/tools/website/PageSizeCheckerTool')),
+        component: lazy(() => import('../components/tools/website/PageSizeCheckerTool')),
       },
       {
         slug: 'wordpress-theme-detector',
@@ -1371,7 +1371,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'WordPress Theme Detector',
         description: 'Detect the WordPress theme used by a website.',
         longDescription: "The WordPress Theme Detector is a handy tool for anyone who is curious about the design of a WordPress website. Whether you're a web developer looking for inspiration, a business owner who wants to emulate a competitor's site, or just a curious user, this tool can help you identify the theme that a website is using. It can also detect parent and child themes, giving you a deeper insight into the site's structure. This is a great way to discover new themes and understand the design trends in your niche.",
-        component: lazy(() => import('@/components/tools/website/WordPressThemeDetectorTool')),
+        component: lazy(() => import('../components/tools/website/WordPressThemeDetectorTool')),
       },
       {
         slug: 'url-rewriting-tool',
@@ -1379,7 +1379,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'URL Rewriting Tool',
         description: 'Create .htaccess rewrite rules to make URLs SEO-friendly.',
         longDescription: "The URL Rewriting Tool is a powerful utility for webmasters and SEOs who want to create clean, user-friendly, and search-engine-friendly URLs. URL rewriting is the process of changing the URL of a web page to make it more readable and memorable. For example, you can use URL rewriting to change a dynamic URL like `product.php?id=123` to a static URL like `product/123`. This not only improves the user experience but also helps search engines understand the structure of your site. Our tool helps you generate the complex `.htaccess` rules needed to achieve this, making your URLs more appealing to both humans and search engine bots.",
-        component: lazy(() => import('@/components/tools/website/UrlRewritingTool')),
+        component: lazy(() => import('../components/tools/website/UrlRewritingTool')),
       },
       {
         slug: 'redirect-checker',
@@ -1387,7 +1387,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Redirect Checker',
         description: 'Follow the redirect path of a URL.',
         longDescription: "The Redirect Checker is an essential tool for webmasters, SEOs, and digital marketers who need to analyze and troubleshoot URL redirects. Redirects are a fundamental part of website management, but they can also be a source of problems if they are not implemented correctly. This tool allows you to trace the full path of a redirect, from the initial URL to the final destination, helping you to identify issues such as redirect chains, loops, and incorrect redirect types (e.g., using a 302 instead of a 301). A clean redirect path is crucial for preserving link equity and ensuring a good user experience.",
-        component: lazy(() => import('@/components/tools/website/RedirectCheckerTool')),
+        component: lazy(() => import('../components/tools/website/RedirectCheckerTool')),
       },
       {
         slug: 'faq-schema-generator',
@@ -1395,7 +1395,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'FAQ Schema Generator',
         description: 'Create FAQPage structured data in JSON-LD format.',
         longDescription: "The FAQ Schema Generator is a powerful tool for SEOs and content creators who want to enhance their search engine visibility. FAQ schema is a type of structured data that you can add to your website to tell search engines that you have a Frequently Asked Questions (FAQ) page. When you use FAQ schema, search engines like Google may display your questions and answers directly in the search results as a rich snippet. This can significantly increase your click-through rate, drive more traffic to your website, and establish your site as an authority on a topic. Our tool makes it easy to generate the necessary JSON-LD code without any programming knowledge.",
-        component: lazy(() => import('@/components/tools/website/FaqSchemaGeneratorTool')),
+        component: lazy(() => import('../components/tools/website/FaqSchemaGeneratorTool')),
       },
       {
         slug: 'privacy-policy-generator',
@@ -1403,7 +1403,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Privacy Policy Generator',
         description: 'Generate a basic privacy policy for your website.',
         longDescription: "The Privacy Policy Generator is an essential tool for any website owner who collects personal data from users. A privacy policy is a legal document that discloses how a website gathers, uses, discloses, and manages a customer or client's data. It is required by law in many jurisdictions (such as GDPR in Europe and CCPA in California), and it is a crucial part of building trust with your users. Our generator helps you create a basic privacy policy that you can adapt to your specific needs, ensuring you are transparent with your users about their data.",
-        component: lazy(() => import('@/components/tools/website/PrivacyPolicyGeneratorTool')),
+        component: lazy(() => import('../components/tools/website/PrivacyPolicyGeneratorTool')),
       },
       {
         slug: 'terms-and-condition-generator',
@@ -1411,7 +1411,7 @@ UTM stands for Urchin Tracking Module. Urchin was a web analytics company that w
         name: 'Terms and Conditions Generator',
         description: 'Generate basic terms and conditions for your website.',
         longDescription: "The Terms and Conditions Generator is an essential tool for any website owner who provides a service or sells products online. A terms and conditions agreement is a legal document that outlines the rules and regulations that users must agree to in order to use your website or service. It is a crucial part of protecting your business from legal liability, defining the scope of your services, and ensuring that your users understand their rights and responsibilities. Our tool helps you generate a foundational document that you can customize for your business.",
-        component: lazy(() => import('@/components/tools/website/TermsAndConditionGeneratorTool')),
+        component: lazy(() => import('../components/tools/website/TermsAndConditionGeneratorTool')),
       },
       {
         slug: 'disclaimer-generator',
@@ -1456,7 +1456,7 @@ Creating a legally sound disclaimer can be a daunting task, especially for those
 **6. Fun Facts and Historical Context**
 
 The concept of a disclaimer has its roots in the legal principle of "caveat emptor," which translates to "let the buyer beware." This principle has been a cornerstone of commercial law for centuries, and its modern-day equivalent is the website disclaimer. Just as a seller in a physical marketplace would use a disclaimer to limit their liability, a website owner uses a disclaimer to manage their legal exposure in the digital realm. The evolution of the disclaimer is a fascinating reflection of how legal principles have adapted to the changing landscape of commerce and communication.`,
-        component: lazy(() => import('@/components/tools/website/DisclaimerGeneratorTool')),
+        component: lazy(() => import('../components/tools/website/DisclaimerGeneratorTool')),
       },
       {
         slug: 'url-decode',
@@ -1499,7 +1499,7 @@ It's that simple! Our tool handles all the complexities of the decoding process 
 **6. Fun Facts and Historical Context**
 
 The concept of URL encoding dates back to the early days of the web, when the internet was a much simpler place. The original URI specification, RFC 1738, was published in 1994 and defined the basic syntax for URLs. This specification was later updated by RFC 3986, which is the current standard for URIs. The percent-encoding mechanism was a clever solution to the problem of transmitting arbitrary data in a URL, and it has stood the test of time, remaining a fundamental part of how the web works today. The longevity of this simple yet effective standard is a testament to the foresight of the web's early pioneers.`,
-        component: lazy(() => import('@/components/tools/website/UrlDecodeTool')),
+        component: lazy(() => import('../components/tools/website/UrlDecodeTool')),
       },
       {
         slug: 'url-encode',
@@ -1507,7 +1507,7 @@ The concept of URL encoding dates back to the early days of the web, when the in
         name: 'URL Encode',
         description: 'Encode a string into a URL-safe format.',
         longDescription: "The URL Encode tool is a simple utility that allows you to encode a string into a URL-safe format. URL encoding, also known as percent-encoding, is a mechanism for encoding information in a Uniform Resource Identifier (URI). It is necessary to encode special characters in a URL so that they can be correctly interpreted by web servers and browsers. This tool is essential for developers who are constructing URLs dynamically, ensuring that all data passed in the URL is transmitted reliably and without corruption.",
-        component: lazy(() => import('@/components/tools/website/UrlEncodeTool')),
+        component: lazy(() => import('../components/tools/website/UrlEncodeTool')),
       },
       {
         slug: 'random-uuid-generator',
@@ -1515,7 +1515,7 @@ The concept of URL encoding dates back to the early days of the web, when the in
         name: 'Random UUID Generator',
         description: 'Generate a random Universally Unique Identifier (UUID).',
         longDescription: "The Random UUID Generator is a simple tool that allows you to generate a random Universally Unique Identifier (UUID). A UUID is a 128-bit number used to uniquely identify information in computer systems. The term 'universally unique' means that the identifier is not only unique within the system where it was generated, but also unique across all systems in the world. This is incredibly useful for developers who need unique IDs for database keys, session identifiers, or any other purpose where a non-sequential, unique identifier is required.",
-        component: lazy(() => import('@/components/tools/website/RandomUuidGeneratorTool')),
+        component: lazy(() => import('../components/tools/website/RandomUuidGeneratorTool')),
       },
       {
         slug: 'url-parser',
@@ -1523,7 +1523,7 @@ The concept of URL encoding dates back to the early days of the web, when the in
         name: 'URL Parser',
         description: 'Break down a URL into its individual components.',
         longDescription: "The URL Parser is a handy tool for web developers, digital marketers, and anyone who needs to deconstruct a URL into its constituent parts. A URL (Uniform Resource Locator) is a complex string of characters that contains a lot of information, and our URL Parser makes it easy to see all of this information at a glance. It breaks down a URL into its protocol, hostname, port, path, query string, and fragment, which is incredibly useful for debugging, data analysis, and understanding the structure of web links.",
-        component: lazy(() => import('@/components/tools/website/UrlParserTool')),
+        component: lazy(() => import('../components/tools/website/UrlParserTool')),
       },
       // Binary Converter Tools
       {
@@ -1563,7 +1563,7 @@ A: Yes, you can use a Binary to Text Converter to reverse the process, provided 
 Fun Fact
 
 The concept of binary code dates back to the 17th century with Gottfried Wilhelm Leibniz, but it was Claude Shannon in the 1930s who connected it to electronic circuits and Boolean algebra, laying the groundwork for modern digital computing.`,
-        component: lazy(() => import('@/components/tools/binary-converter/TextToBinaryConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/TextToBinaryConverterTool')),
       },
       {
         slug: 'binary-to-text',
@@ -1602,7 +1602,7 @@ A: No, only binary data that represents text can be meaningfully converted. Bina
 Fun Fact
 
 The first instance of a character encoding standard was the Baudot code, created by Émile Baudot in 1870 for telegraphy. It used a 5-bit encoding, which was a precursor to the more complex ASCII and Unicode standards we use today.`,
-        component: lazy(() => import('@/components/tools/binary-converter/BinaryToTextConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/BinaryToTextConverterTool')),
       },
       {
         slug: 'hex-to-binary',
@@ -1641,7 +1641,7 @@ A: Yes, the converter processes each hexadecimal digit independently, so you can
 Fun Fact
 
 The use of letters A-F to represent values 10-15 in hexadecimal was not standardized until the 1960s with the introduction of the IBM System/360 mainframe computer. Before that, various other symbols were used!`,
-        component: lazy(() => import('@/components/tools/binary-converter/HexToBinaryConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/HexToBinaryConverterTool')),
       },
       {
         slug: 'binary-to-hex',
@@ -1680,7 +1680,7 @@ A: For practical purposes, most online tools can handle very long binary strings
 Fun Fact
 
 In the early days of computing, octal (base-8) was also a popular choice for representing binary data, as it groups binary digits into sets of three. However, hexadecimal's 4-bit grouping aligns more neatly with the common 8-bit byte, which is why it has become the industry standard.`,
-        component: lazy(() => import('@/components/tools/binary-converter/BinaryToHexConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/BinaryToHexConverterTool')),
       },
       {
         slug: 'ascii-to-binary',
@@ -1719,7 +1719,7 @@ A: Yes, ASCII is still highly relevant. UTF-8, the most common character encodin
 Fun Fact
 
 The first-ever email was sent in 1971 by Ray Tomlinson, and it was sent over a network using a protocol that relied on ASCII characters. The content of the email was likely something insignificant, like "QWERTYUIOP."`,
-        component: lazy(() => import('@/components/tools/binary-converter/AsciiToBinaryConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/AsciiToBinaryConverterTool')),
       },
       {
         slug: 'binary-to-ascii',
@@ -1758,7 +1758,7 @@ A: A general "Binary to Text" converter might support multiple encodings (like U
 Fun Fact
 
 The @ symbol, now ubiquitous in email addresses and social media, has an ASCII value of 64 (binary 01000000). Its selection for email addresses by Ray Tomlinson was a practical choice because it was an uncommon character in names and was used to separate the user from their host machine.`,
-        component: lazy(() => import('@/components/tools/binary-converter/BinaryToAsciiConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/BinaryToAsciiConverterTool')),
       },
       {
         slug: 'decimal-to-binary',
@@ -1797,7 +1797,7 @@ A: Fractional numbers are converted to binary using a different method than inte
 Fun Fact
 
 The binary system was first fully documented by Gottfried Wilhelm Leibniz in the 17th century in his article "Explication de l'Arithmétique Binaire". He believed that the binary system was a symbol of the Christian idea of creation out of nothing (creatio ex nihilo), where 1 represented God and 0 represented the void.`,
-        component: lazy(() => import('@/components/tools/binary-converter/DecimalToBinaryConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/DecimalToBinaryConverterTool')),
       },
       {
         slug: 'binary-to-decimal',
@@ -1836,7 +1836,7 @@ A: Yes, understanding how to convert between binary and decimal is a foundationa
 Fun Fact
 
 The term "bit," the basic unit of information in computing, is a portmanteau of "binary digit." The term was coined by John W. Tukey in 1947, an American mathematician and statistician.`,
-        component: lazy(() => import('@/components/tools/binary-converter/BinaryToDecimalConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/BinaryToDecimalConverterTool')),
       },
       {
         slug: 'text-to-ascii',
@@ -1875,7 +1875,7 @@ A: Yes, an ASCII to Text Converter can perform the reverse operation, translatin
 Fun Fact
 
 The smiley face emoticon :-) was first proposed in 1982 by Scott Fahlman on an online bulletin board. In ASCII, it is represented by the codes 58, 45, 41.`,
-        component: lazy(() => import('@/components/tools/binary-converter/TextToAsciiConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/TextToAsciiConverterTool')),
       },
       {
         slug: 'hex-to-decimal',
@@ -1916,7 +1916,7 @@ A: Yes, the tool can handle large hexadecimal numbers, making it useful for a wi
 Fun Fact
 
 The colors on web pages are often represented using hexadecimal codes, like #FF0000 for red. This code represents the intensity of Red, Green, and Blue (RGB). In this case, it's maximum red (FF), no green (00), and no blue (00).`,
-        component: lazy(() => import('@/components/tools/binary-converter/HexToDecimalConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/HexToDecimalConverterTool')),
       },
       {
         slug: 'decimal-to-hex',
@@ -1955,7 +1955,7 @@ A: Yes, fractional parts can also be converted, though it involves a different p
 Fun Fact
 
 The city of Shanghai, China, uses a hexadecimal clock. The clock displays the time in a format that uses base-16, which is a unique and fascinating application of the hexadecimal system in daily life.`,
-        component: lazy(() => import('@/components/tools/binary-converter/DecimalToHexConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/DecimalToHexConverterTool')),
       },
       {
         slug: 'octal-to-binary',
@@ -1994,7 +1994,7 @@ A: The tool will flag it as an error, as the octal system only uses the digits 0
 Fun Fact
 
 The word "octal" comes from the Latin word "octo," meaning eight. This reflects the base-8 nature of the number system.`,
-        component: lazy(() => import('@/components/tools/binary-converter/OctalToBinaryConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/OctalToBinaryConverterTool')),
       },
       {
         slug: 'binary-to-octal',
@@ -2035,7 +2035,7 @@ A: Yes, fractional parts can be converted by grouping the bits in threes from le
 Fun Fact
 
 The concept of using octal as a computer-friendly representation of binary dates back to the days of mainframe computers like the IBM System/360, where it was used for debugging and programming before hexadecimal became the dominant standard.`,
-        component: lazy(() => import('@/components/tools/binary-converter/BinaryToOctalConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/BinaryToOctalConverterTool')),
       },
       {
         slug: 'octal-to-decimal',
@@ -2074,7 +2074,7 @@ A: While less common now, octal numbers appear in some legacy computer systems a
 Fun Fact
 
 The octal system was famously used in the PDP-8 minicomputer, a very popular machine in the 1960s and 70s. Its 12-bit architecture made octal a more natural choice than hexadecimal for representing its data.`,
-        component: lazy(() => import('@/components/tools/binary-converter/OctalToDecimalConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/OctalToDecimalConverterTool')),
       },
       {
         slug: 'decimal-to-octal',
@@ -2113,7 +2113,7 @@ A: You can convert the resulting octal number back to decimal to see if it match
 Fun Fact
 
 The octal number system was chosen for some early computers because their architecture was based on 6-bit, 12-bit, or 24-bit words, which are easily divisible by the 3 bits that represent an octal digit.`,
-        component: lazy(() => import('@/components/tools/binary-converter/DecimalToOctalConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/DecimalToOctalConverterTool')),
       },
       {
         slug: 'hex-to-octal',
@@ -2152,7 +2152,7 @@ A: All three are powers of 2 (2^4=16, 2^3=8, 2^1=2), which is why conversions be
 Fun Fact
 
 The "transistor," the fundamental building block of modern electronics, was invented at Bell Labs in 1947. The team was awarded the Nobel Prize in Physics in 1956 for this invention, which paved the way for the digital revolution and the need for number systems like binary, octal, and hexadecimal.`,
-        component: lazy(() => import('@/components/tools/binary-converter/HexToOctalConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/HexToOctalConverterTool')),
       },
       {
         slug: 'octal-to-hex',
@@ -2191,7 +2191,7 @@ A: The tool will return an error, as octal numbers can only contain digits from 
 Fun Fact
 
 The Voyager 1 and 2 space probes, launched in 1977, were programmed using assembly language for a custom 18-bit word computer architecture. Programmers of that era would have been very familiar with octal and hexadecimal for debugging and programming such systems.`,
-        component: lazy(() => import('@/components/tools/binary-converter/OctalToHexConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/OctalToHexConverterTool')),
       },
       {
         slug: 'text-to-octal',
@@ -2230,7 +2230,7 @@ A: Yes, an Octal to Text Converter can perform the reverse operation.
 Fun Fact
 
 In the C programming language, an integer literal that starts with a '0' is treated as an octal number. This has been a source of confusion for many novice programmers who might use leading zeros for formatting, only to get unexpected results!`,
-        component: lazy(() => import('@/components/tools/binary-converter/TextToOctalConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/TextToOctalConverterTool')),
       },
       {
         slug: 'octal-to-text',
@@ -2269,7 +2269,7 @@ A: While conversions from octal are less common today than they once were, this 
 Fun Fact
 
 The practice of using octal in computing is closely tied to the history of mainframe computers from companies like Digital Equipment Corporation (DEC), whose PDP series of computers had a significant influence on the development of hacker culture and the early internet.`,
-        component: lazy(() => import('@/components/tools/binary-converter/OctalToTextConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/OctalToTextConverterTool')),
       },
       {
         slug: 'text-to-hex',
@@ -2308,7 +2308,7 @@ A: Yes, a HEX to Text Converter can perform the reverse operation.
 Fun Fact
 
 The "magic number" at the beginning of many file types, which identifies the file format, is often represented in hexadecimal. For example, a JPEG file starts with 'FF D8', and a PDF file starts with '25 50 44 46'.`,
-        component: lazy(() => import('@/components/tools/binary-converter/TextToHexConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/TextToHexConverterTool')),
       },
       {
         slug: 'hex-to-text',
@@ -2347,7 +2347,7 @@ A: Hex encoding is often used in data dumps, network packet analysis, and in the
 Fun Fact
 
 The term "hexadecimal" is a bit of a mix-and-match of languages. "Hexa" is Greek for six, and "decimal" is Latin for tenth. A more purely Latin term would be "sexadecimal," but "hexadecimal" has become the common standard.`,
-        component: lazy(() => import('@/components/tools/binary-converter/HexToTextConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/HexToTextConverterTool')),
       },
       {
         slug: 'text-to-decimal',
@@ -2386,7 +2386,7 @@ A: The process is similar, but the final output is in base-10 (decimal) instead 
 Fun Fact
 
 The ASCII code for the "escape" key (ESC) is 27. This control character was originally used to signal a switch from one character set to another or to introduce a special sequence of characters, a function it still serves in many programming and terminal environments today.`,
-        component: lazy(() => import('@/components/tools/binary-converter/TextToDecimalConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/TextToDecimalConverterTool')),
       },
       {
         slug: 'decimal-to-text',
@@ -2425,6 +2425,6 @@ A: This tool is specifically for decoding numbers that represent character codes
 Fun Fact
 
 The "Backspace" key is represented by the ASCII code 8. This non-printable control character signals the cursor to move one position backward, and in most text editors, it also deletes the character at that position.`,
-        component: lazy(() => import('@/components/tools/binary-converter/DecimalToTextConverterTool')),
+        component: lazy(() => import('../components/tools/binary-converter/DecimalToTextConverterTool')),
       },
     ];
