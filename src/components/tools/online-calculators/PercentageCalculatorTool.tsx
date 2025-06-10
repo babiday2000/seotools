@@ -1,0 +1,124 @@
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { toast } from 'sonner';
+import ContentDisplay from './ContentDisplay';
+const PercentageCalculatorTool = () => {
+  const [percentage, setPercentage] = useState('');
+  const [number, setNumber] = useState('');
+  const [result, setResult] = useState<number | null>(null);
+
+  const handleCalculate = () => {
+    const numPercentage = parseFloat(percentage);
+    const numNumber = parseFloat(number);
+
+    if (isNaN(numPercentage) || isNaN(numNumber)) {
+      toast.error('Please enter valid numbers in all fields.');
+      return;
+    }
+
+    const calculatedResult = (numPercentage / 100) * numNumber;
+    setResult(calculatedResult);
+    toast.success('Percentage calculated successfully!');
+  };
+
+  return (
+    <>
+      <Card>
+        <CardHeader>
+          <CardTitle>Percentage Calculator</CardTitle>
+          <CardDescription>Calculate the percentage of a number.</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Input
+              type="number"
+              placeholder="Percentage (%)"
+              value={percentage}
+              onChange={(e) => setPercentage(e.target.value)}
+            />
+            <Input
+              type="number"
+              placeholder="Number"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
+            />
+          </div>
+          <Button onClick={handleCalculate}>Calculate</Button>
+          {result !== null && (
+            <div className="pt-4">
+              <h3 className="text-lg font-semibold">Result:</h3>
+              <p className="text-2xl font-bold">{result}</p>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+      <ContentDisplay
+        title="What is a Percentage Calculator?"
+        content={
+          <div className="space-y-4">
+            <p>A Percentage Calculator is a practical tool that simplifies the process of calculating percentages, a fundamental mathematical operation used in countless everyday situations. From figuring out discounts and calculating tips to analyzing statistical data and managing finances, percentages are everywhere. This calculator provides a user-friendly interface to perform these calculations quickly and accurately, eliminating the need for manual formulas and reducing the risk of errors. Whether you're a student, a professional, or just someone who needs to make a quick calculation, this tool is designed to provide instant and reliable results.</p>
+            <p>The core purpose of a Percentage Calculator is to make complex calculations accessible to everyone. It can handle various types of percentage problems, such as finding the percentage of a number, determining the percentage increase or decrease between two values, and calculating what percentage one number is of another. This versatility makes it an invaluable asset for a wide range of applications, including retail, finance, and academics. By automating the process, the calculator saves time and effort, allowing you to focus on interpreting the results rather than getting bogged down in the calculations themselves.</p>
+          </div>
+        }
+      />
+      <ContentDisplay
+        title="Key Components of a Percentage Calculator"
+        content={
+          <div className="space-y-4">
+            <p>To perform its calculations, the Percentage Calculator relies on a few key components that work together to process your input and deliver an accurate result. Understanding these components will give you a better insight into how the tool works.</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li><strong>Percentage Value:</strong> This is the percentage you want to calculate (e.g., 20%). You enter this value into the designated input field. The calculator uses this number as the basis for its calculation, converting it into a decimal for the formula.</li>
+              <li><strong>Base Number:</strong> This is the total amount or value from which the percentage is to be calculated (e.g., the original price of an item). You input this value into the second field. The calculator uses this as the reference point for determining the final result.</li>
+              <li><strong>Calculation Formula:</strong> The calculator uses the standard mathematical formula for percentages: (Percentage / 100) * Base Number. This formula is applied instantly when you click the "Calculate" button, ensuring you get an immediate and accurate answer.</li>
+            </ul>
+            <p>These components are integrated into a simple and intuitive interface, making it easy for anyone to perform percentage calculations without needing to remember the formula. The tool is designed for efficiency, providing a seamless experience from input to result, so you can get the information you need with minimal effort.</p>
+          </div>
+        }
+      />
+      <ContentDisplay
+        title="How to Use the Percentage Calculator"
+        content={
+          <div className="space-y-4">
+            <p>Using the Percentage Calculator is incredibly simple. Just follow these steps to get your result in seconds:</p>
+            <ol className="list-decimal space-y-2 pl-6">
+              <li><strong>Enter the Percentage:</strong> In the first input field, type the percentage you want to find (e.g., for 20%, enter "20").</li>
+              <li><strong>Enter the Number:</strong> In the second input field, type the base number from which you are calculating the percentage (e.g., if you want to find 20% of 150, enter "150").</li>
+              <li><strong>Click "Calculate":</strong> Press the "Calculate" button. The calculator will instantly display the result, showing you the calculated percentage value.</li>
+            </ol>
+            <p>You can use this tool for a variety of calculations by simply changing the input values. For example, you can calculate a discount on a product, determine the amount of a tip, or find out the interest on a loan. The possibilities are endless, and the calculator is always here to help you get the right answer.</p>
+          </div>
+        }
+      />
+      <ContentDisplay
+        title="Frequently Asked Questions (FAQ)"
+        content={
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h4 className="font-semibold">Can I calculate percentage increases or decreases?</h4>
+              <p>This specific tool is designed to find the percentage of a number. For calculating percentage increases or decreases, you would typically need a tool with additional input fields for the initial and final values. However, you can still use this calculator to find the value of the increase or decrease and then add or subtract it from the original number.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-semibold">What if I enter non-numeric characters?</h4>
+              <p>The calculator is designed to accept only numeric input. If you enter any non-numeric characters, the tool will likely show an error message, prompting you to enter valid numbers to ensure an accurate calculation.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-semibold">Is this calculator suitable for financial calculations?</h4>
+              <p>While the calculator provides accurate results for basic percentage calculations, it is always recommended to consult with a financial advisor for complex financial decisions. This tool is perfect for quick estimates and everyday calculations but may not account for all the variables in a detailed financial scenario.</p>
+            </div>
+          </div>
+        }
+      />
+      <ContentDisplay
+        title="Fun Fact"
+        content={
+          <p>Did you know that the concept of percentages dates back to ancient Rome, even before the existence of the decimal system? The Romans used fractions in multiples of 1/100 for calculations, especially for taxes. The term "per cent" is derived from the Latin "per centum," which means "by the hundred." This system laid the groundwork for the modern percentage calculations we use today in everything from finance to statistics.</p>
+        }
+      />
+
+    </>
+  );
+};
+
+export default PercentageCalculatorTool;

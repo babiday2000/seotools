@@ -1,0 +1,129 @@
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { toast } from 'sonner';
+import ContentDisplay from './ContentDisplay';
+const CpmCalculatorTool = () => {
+  const [cost, setCost] = useState('');
+  const [impressions, setImpressions] = useState('');
+  const [cpm, setCpm] = useState<number | null>(null);
+
+  const handleCalculate = () => {
+    const numCost = parseFloat(cost);
+    const numImpressions = parseInt(impressions);
+
+    if (isNaN(numCost) || isNaN(numImpressions)) {
+      toast.error('Please enter valid numbers in all fields.');
+      return;
+    }
+
+    if (numImpressions === 0) {
+      toast.error('Impressions cannot be zero.');
+      return;
+    }
+
+    const calculatedCpm = (numCost / numImpressions) * 1000;
+    setCpm(calculatedCpm);
+    toast.success('CPM calculated successfully!');
+  };
+
+  return (
+    <>
+      <Card>
+        <CardHeader>
+          <CardTitle>CPM Calculator</CardTitle>
+          <CardDescription>Calculate the Cost Per Mille (CPM) for your campaigns.</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Input
+              type="number"
+              placeholder="Total Cost"
+              value={cost}
+              onChange={(e) => setCost(e.target.value)}
+            />
+            <Input
+              type="number"
+              placeholder="Total Impressions"
+              value={impressions}
+              onChange={(e) => setImpressions(e.target.value)}
+            />
+          </div>
+          <Button onClick={handleCalculate}>Calculate</Button>
+          {cpm !== null && (
+            <div className="pt-4">
+              <h3 className="text-lg font-semibold">CPM:</h3>
+              <p className="text-2xl font-bold">${cpm.toFixed(2)}</p>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+      <ContentDisplay
+        title="What is a CPM Calculator?"
+        content={
+          <div className="space-y-4">
+            <p>A CPM Calculator is a crucial tool for advertisers, marketers, and publishers to measure the cost-effectiveness of their advertising campaigns. CPM stands for "Cost Per Mille," with "mille" being the Latin word for a thousand. In advertising, CPM represents the cost an advertiser pays for one thousand views or impressions of an advertisement. This calculator allows you to easily determine the CPM, helping you to assess the efficiency of your ad spend and compare the performance of different campaigns or ad platforms.</p>
+            <p>The primary purpose of a CPM Calculator is to provide a standardized metric for the cost of ad impressions. By calculating the CPM, you can understand how much you are paying to reach a thousand potential customers, which is essential for budgeting and optimizing your advertising strategy. For publishers, it helps in setting competitive ad rates and forecasting revenue. This tool simplifies the calculation, making it accessible for both seasoned marketing professionals and those new to digital advertising.</p>
+          </div>
+        }
+      />
+      <ContentDisplay
+        title="Key Components of a CPM Calculator"
+        content={
+          <div className="space-y-4">
+            <p>To calculate the CPM, the tool uses two primary inputs that are fundamental to understanding the cost of your advertising campaigns. Here’s what you need to know about them:</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li><strong>Total Cost:</strong> This is the total amount of money spent on the advertising campaign. You enter this value into the first input field.</li>
+              <li><strong>Total Impressions:</strong> This is the total number of times the advertisement was displayed to users. This data is typically provided by the advertising platform (e.g., Google Ads, Facebook Ads).</li>
+              <li><strong>Calculation Formula:</strong> The calculator uses the standard CPM formula: CPM = (Total Cost / Total Impressions) * 1000. This formula calculates the cost for every thousand impressions, providing a clear metric for comparison.</li>
+            </ul>
+            <p>By inputting these two values, you can instantly determine your CPM and gain valuable insights into your campaign's performance. The calculator is designed to be straightforward, allowing you to make quick and informed decisions about your advertising efforts.</p>
+          </div>
+        }
+      />
+      <ContentDisplay
+        title="How to Use the CPM Calculator"
+        content={
+          <div className="space-y-4">
+            <p>Using the CPM Calculator is a simple and quick process. Follow these steps to find your CPM:</p>
+            <ol className="list-decimal space-y-2 pl-6">
+              <li><strong>Enter the Total Cost:</strong> In the first input field, type the total cost of your advertising campaign.</li>
+              <li><strong>Enter the Total Impressions:</strong> In the second input field, enter the total number of impressions your ad received.</li>
+              <li><strong>Click "Calculate":</strong> Press the "Calculate" button. The tool will immediately compute and display the CPM for your campaign.</li>
+            </ol>
+            <p>This calculator is an essential tool for any digital marketer, helping you to monitor your campaign's efficiency and make data-driven adjustments to maximize your return on investment.</p>
+          </div>
+        }
+      />
+      <ContentDisplay
+        title="Frequently Asked Questions (FAQ)"
+        content={
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h4 className="font-semibold">What is a good CPM?</h4>
+              <p>A "good" CPM can vary significantly depending on the industry, ad placement, geographic location, and targeting parameters. Some industries have much higher CPMs due to greater competition. It's best to benchmark your CPM against industry averages and your own historical data to gauge performance.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-semibold">Is a lower CPM always better?</h4>
+              <p>Not necessarily. A very low CPM might indicate that your ads are being shown to a less valuable or less engaged audience. While a lower CPM means you are paying less for impressions, it's also important to consider the quality of those impressions and whether they are leading to conversions or other desired actions.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-semibold">How is CPM different from CPC and CPA?</h4>
+              <p>CPM (Cost Per Mille) is the cost per thousand impressions, focusing on ad views. CPC (Cost Per Click) is the cost for each click on an ad, focusing on user engagement. CPA (Cost Per Acquisition) is the cost for each conversion (e.g., a sale or lead), focusing on the final business outcome. Each metric is useful for evaluating different aspects of an ad campaign's performance.</p>
+            </div>
+          </div>
+        }
+      />
+      <ContentDisplay
+        title="Fun Fact"
+        content={
+          <p>Did you know that the concept of CPM dates back to the early days of print advertising? Advertisers would pay a certain amount for every thousand copies of a newspaper or magazine that was printed, regardless of how many people actually saw their ad. The term "Mille" is Latin for "thousand," which is why CPM is also known as Cost Per Thousand. This model has since been adapted for the digital age, where it is used to measure the cost of online ad impressions.</p>
+        }
+      />
+
+    </>
+  );
+};
+
+export default CpmCalculatorTool;
