@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import RelatedTools from '../RelatedTools';
+import BackToTopButton from '../ui/BackToTopButton';
 import { useLocation } from 'react-router-dom';
 import { tools, toolCategories } from '@/data/tools';
 
@@ -36,6 +37,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {isToolPage && category !== 'domain-ip-tools' && <RelatedTools category={category} currentToolName={currentToolName} />}
       </main>
       <Footer />
+      <BackToTopButton />
     </div>
   );
 };
