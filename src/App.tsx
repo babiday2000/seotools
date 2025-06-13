@@ -8,6 +8,7 @@ import ToolCategoryPage from '@/pages/ToolCategoryPage';
 import ToolPage from '@/pages/ToolPage';
 import BlogPage from '@/pages/Blog';
 import BlogPostPage from '@/pages/BlogPost';
+import BlogCategoryPage from '@/pages/BlogCategoryPage';
 import ContactPage from '@/pages/Contact';
 import PrivacyPolicyPage from '@/pages/PrivacyPolicy';
 import TermsAndConditionsPage from '@/pages/TermsAndConditions';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/tools/:category" element={<ToolCategoryPage />} />
             <Route path="/tools/:category/:slug" element={<ToolPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/category/:categoryName" element={<BlogCategoryPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

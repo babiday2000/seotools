@@ -1,4 +1,7 @@
 import teamWorkingOnSeo from '@/assets/Team working on SEO.png';
+import theUltimateGuide from '@/assets/The Ultimate Guide.png';
+import youtubeToolsForCreators from '@/assets/YouTube Tools for Creators.jpg';
+import tenEssentialSeoTips from '@/assets/10 Essential SEO Tips.jpg';
 export const blogPosts = [
     {
         slug: 'ultimate-guide-youtube-tools-creators',
@@ -8,7 +11,7 @@ export const blogPosts = [
         authorAvatar: 'https://i.pravatar.cc/150?img=2',
         date: 'June 7, 2025',
         tags: ['YouTube', 'Content Creation', 'SEO'],
-        imageUrl: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        imageUrl: youtubeToolsForCreators,
     },
     {
         slug: '10-essential-seo-tips-for-beginners-2025',
@@ -18,7 +21,7 @@ export const blogPosts = [
         authorAvatar: 'https://i.pravatar.cc/150?img=1',
         date: 'July 15, 2025',
         tags: ['SEO Basics', 'Beginners'],
-        imageUrl: 'https://images.pexels.com/photos/5989933/pexels-photo-5989933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        imageUrl: tenEssentialSeoTips,
     },
     {
         slug: 'mastering-keyword-research-ultimate-guide',
@@ -28,7 +31,7 @@ export const blogPosts = [
         authorAvatar: 'https://i.pravatar.cc/150?img=3',
         date: 'July 10, 2024',
         tags: ['Keyword Research', 'Advanced'],
-        imageUrl: 'https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        imageUrl: theUltimateGuide,
     },
     {
         slug: 'importance-of-backlinks-how-to-get-them',

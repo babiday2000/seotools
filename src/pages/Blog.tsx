@@ -57,10 +57,10 @@ const BlogPage = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  <li><Link to="#" className="text-muted-foreground hover:text-foreground">SEO Basics</Link></li>
-                  <li><Link to="#" className="text-muted-foreground hover:text-foreground">Keyword Research</Link></li>
-                  <li><Link to="#" className="text-muted-foreground hover:text-foreground">Link Building</Link></li>
-                  <li><Link to="#" className="text-muted-foreground hover:text-foreground">Technical SEO</Link></li>
+                  <li><Link to="/blog/category/seo-basics" className="text-muted-foreground hover:text-foreground">SEO Basics</Link></li>
+                  <li><Link to="/blog/category/keyword-research" className="text-muted-foreground hover:text-foreground">Keyword Research</Link></li>
+                  <li><Link to="/blog/category/link-building" className="text-muted-foreground hover:text-foreground">Link Building</Link></li>
+                  <li><Link to="/blog/category/technical-seo" className="text-muted-foreground hover:text-foreground">Technical SEO</Link></li>
                 </ul>
               </CardContent>
             </Card>
