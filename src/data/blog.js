@@ -2,7 +2,18 @@ import teamWorkingOnSeo from '@/assets/Team working on SEO.png';
 import theUltimateGuide from '@/assets/The Ultimate Guide.png';
 import youtubeToolsForCreators from '@/assets/YouTube Tools for Creators.jpg';
 import tenEssentialSeoTips from '@/assets/10 Essential SEO Tips.jpg';
+import seoToolsGuide from '@/assets/seo-tools-guide.jpg';
 export const blogPosts = [
+    {
+        slug: 'the-ultimate-guide-to-seo-tools',
+        title: 'The Ultimate Guide to Using SEO Tools for Maximum Website Growth',
+        description: 'Learn how to use SEO tools to their full potential and achieve maximum website growth. This guide covers everything from keyword research to technical SEO.',
+        author: 'SeoTooler Team',
+        authorAvatar: 'https://i.pravatar.cc/150?img=5',
+        date: 'June 13, 2025',
+        tags: ['SEO', 'Tools', 'Growth Hacking'],
+        imageUrl: seoToolsGuide,
+    },
     {
         slug: 'ultimate-guide-youtube-tools-creators',
         title: 'The Ultimate Guide to YouTube Tools for Creators',
