@@ -9,7 +9,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "sitemap": "vite-node scripts/generate-sitemap.ts"
+    "sitemap": "vite-node scripts/generate-sitemap.ts",
+    "sitemap:extras": "node scripts/generate-sitemap-extras.js",
+    "sitemap:all": "npm run sitemap && npm run sitemap:extras",
+    "validate-robots": "node scripts/validate-robots.js",
+    "validate-sitemap": "node scripts/validate-sitemap.js",
+    "validate:all": "npm run validate-robots && npm run validate-sitemap"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

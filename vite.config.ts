@@ -11,6 +11,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  publicDir: 'public',
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
