@@ -1,26 +1,35 @@
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import HomePage from '@/pages/Home';
-import AboutPage from '@/pages/About';
-import ToolsDirectoryPage from '@/pages/Tools';
-import ToolCategoryPage from '@/pages/ToolCategoryPage';
-import ToolPage from '@/pages/ToolPage';
-import BlogPage from '@/pages/Blog';
-import BlogPostPage from '@/pages/BlogPost';
-import BlogCategoryPage from '@/pages/BlogCategoryPage';
-import ContactPage from '@/pages/Contact';
-import PrivacyPolicyPage from '@/pages/PrivacyPolicy';
-import TermsAndConditionsPage from '@/pages/TermsAndConditions';
-import DisclaimerPage from '@/pages/Disclaimer';
 import { Toaster } from '@/components/ui/sonner';
-import { Progress } from '@/components/ui/progress';
+
+// Lazy load non-critical pages for better performance
+const AboutPage = lazy(() => import('@/pages/About'));
+const ToolsDirectoryPage = lazy(() => import('@/pages/Tools'));
+const ToolCategoryPage = lazy(() => import('@/pages/ToolCategoryPage'));
+const ToolPage = lazy(() => import('@/pages/ToolPage'));
+const BlogPage = lazy(() => import('@/pages/Blog'));
+const BlogPostPage = lazy(() => import('@/pages/BlogPost'));
+const BlogCategoryPage = lazy(() => import('@/pages/BlogCategoryPage'));
+const ContactPage = lazy(() => import('@/pages/Contact'));
+const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicy'));
+const TermsAndConditionsPage = lazy(() => import('@/pages/TermsAndConditions'));
+const DisclaimerPage = lazy(() => import('@/pages/Disclaimer'));
+
+// Optimized loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center h-64">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+    <span className="ml-2 text-sm text-muted-foreground">Loading...</span>
+  </div>
+);
 
 function App() {
   return (
     <>
       <Layout>
-        <Suspense fallback={<div className="flex items-center justify-center h-64"><Progress value={50} className="w-1/2" /></div>}>
+        <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

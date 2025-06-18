@@ -1,7 +1,7 @@
-import teamWorkingOnSeo from '@/assets/Team working on SEO.png';
-import theUltimateGuide from '@/assets/The Ultimate Guide.png';
-import youtubeToolsForCreators from '@/assets/YouTube Tools for Creators.jpg';
-import tenEssentialSeoTips from '@/assets/10 Essential SEO Tips.jpg';
+import teamWorkingOnSeo from '@/assets/team-working-on-seo-optimized.webp';
+import theUltimateGuide from '@/assets/ultimate-guide-optimized.webp';
+import youtubeToolsForCreators from '@/assets/youtube-tools-optimized.webp';
+import tenEssentialSeoTips from '@/assets/10-essential-seo-tips-optimized.webp';
 import seoToolsGuide from '@/assets/seo-tools-guide.jpg';
 
 export const blogPosts = [

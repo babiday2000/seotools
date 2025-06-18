@@ -1,15 +1,21 @@
 import { useState } from 'react';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Clipboard, ClipboardCheck } from 'lucide-react';
-import JavaScriptObfuscator from 'javascript-obfuscator';
+import { Clipboard, ClipboardCheck, Loader2 } from 'lucide-react';
 const JavaScriptObfuscatorTool = () => {
   const [prettyJs, setPrettyJs] = useState('');
   const [obfuscatedJs, setObfuscatedJs] = useState('');
   const [copied, setCopied] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
 
-  const handleObfuscate = () => {
+  const handleObfuscate = async () => {
+    if (!prettyJs.trim()) return;
+    
+    setIsProcessing(true);
     try {
+      // Dynamic import to avoid including in main bundle
+      const { default: JavaScriptObfuscator } = await import('javascript-obfuscator');
+      
       const obfuscationResult = JavaScriptObfuscator.obfuscate(prettyJs, {
         compact: true,
         controlFlowFlattening: true,
@@ -43,6 +49,8 @@ const JavaScriptObfuscatorTool = () => {
       setObfuscatedJs(obfuscationResult.getObfuscatedCode());
     } catch {
       setObfuscatedJs('Invalid JavaScript to obfuscate.');
+    } finally {
+      setIsProcessing(false);
     }
   };
 
@@ -79,8 +87,15 @@ const JavaScriptObfuscatorTool = () => {
           </Button>
         </div>
       </div>
-      <Button onClick={handleObfuscate} disabled={!prettyJs}>
-        Obfuscate JavaScript
+      <Button onClick={handleObfuscate} disabled={!prettyJs || isProcessing}>
+        {isProcessing ? (
+          <>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Obfuscating...
+          </>
+        ) : (
+          'Obfuscate JavaScript'
+        )}
       </Button>
 
       <div className="max-w-4xl mx-auto space-y-12 text-left">

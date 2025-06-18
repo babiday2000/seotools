@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "tsc -b && vite build",
+    "build:analyze": "npm run build && node scripts/analyze-performance.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
@@ -14,7 +15,9 @@
     "sitemap:all": "npm run sitemap && npm run sitemap:extras",
     "validate-robots": "node scripts/validate-robots.js",
     "validate-sitemap": "node scripts/validate-sitemap.js",
-    "validate:all": "npm run validate-robots && npm run validate-sitemap"
+    "validate:all": "npm run validate-robots && npm run validate-sitemap",
+    "performance:analyze": "node scripts/analyze-performance.js",
+    "optimize": "npm run build:analyze && npm run validate:all"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -89,6 +92,7 @@
     "react-router-dom": "^6.25.1",
     "recharts": "^2.12.7",
     "remark-gfm": "^4.0.1",
+    "sharp": "^0.34.2",
     "sonner": "^1.5.0",
     "subtitle": "^4.2.2-alpha.0",
     "tailwind-merge": "^2.5.2",
