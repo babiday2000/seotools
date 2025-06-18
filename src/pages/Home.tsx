@@ -4,12 +4,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Search, BarChart, Link as LinkIcon, HelpCircle, TrendingUp, Zap } from 'lucide-react';
 import { Seo } from '@/components/Seo';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import { lazy, Suspense } from 'react';
+
+// Lazy load non-critical components for better LCP
+const Accordion = lazy(() => import('@/components/ui/accordion').then(module => ({ default: module.Accordion })));
+const AccordionContent = lazy(() => import('@/components/ui/accordion').then(module => ({ default: module.AccordionContent })));
+const AccordionItem = lazy(() => import('@/components/ui/accordion').then(module => ({ default: module.AccordionItem })));
+const AccordionTrigger = lazy(() => import('@/components/ui/accordion').then(module => ({ default: module.AccordionTrigger })));
 
 const features = [
   {
@@ -33,16 +34,33 @@ const testimonials = [
   {
     name: 'AlexTube',
     title: 'YouTube Creator',
-    avatar: 'https://i.pravatar.cc/150?img=3',
+    avatar: '', // Using fallback instead of external image
     quote: "Seotooler's YouTube tools have been a game-changer for my channel. I've been able to grow my audience and increase my views by 50% in just a few months!",
   },
   {
     name: 'CreativeFlow',
     title: 'Content Creator',
-    avatar: 'https://i.pravatar.cc/150?img=4',
+    avatar: '', // Using fallback instead of external image
     quote: "I love how easy it is to use Seotooler's tools. They've helped me optimize my videos and get more subscribers. I highly recommend it to any YouTube creator.",
   },
 ];
+
+// Optimized avatar component for better loading
+const OptimizedAvatar = ({ src, alt, fallback }: { src: string; alt: string; fallback: string }) => (
+  <Avatar className="h-12 w-12">
+    {src ? (
+      <AvatarImage 
+        src={src} 
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : null}
+    <AvatarFallback className="bg-primary text-primary-foreground font-semibold">
+      {fallback}
+    </AvatarFallback>
+  </Avatar>
+);
 
 const faqs = [
     {
@@ -61,7 +79,7 @@ const faqs = [
         question: "Can I track my video rankings with Seotooler?",
         answer: "Absolutely! Our Video Rank Tracking tool allows you to monitor your video's performance for specific keywords on YouTube. This helps you understand what's working and what's not, so you can optimize your content strategy."
     }
-]
+];
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -74,11 +92,11 @@ const HomePage = () => {
       />
       <div className="space-y-24">
         {/* Hero Section */}
-        <section className="text-center animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4">
+        <section className="hero-container animate-fade-in">
+          <h1 className="hero-title">
             Unlock Your YouTube Potential with Top-Tier SEO Tools
           </h1>
-          <p className="max-w-3xl mx-auto text-lg text-muted-foreground mb-8">
+          <p className="hero-description text-muted-foreground">
             Elevate your YouTube channel with our suite of free, powerful SEO tools. From in-depth keyword research to comprehensive video optimization, Seotooler is your partner in climbing the ranks.
           </p>
           <div className="flex justify-center gap-4">
@@ -117,7 +135,7 @@ const HomePage = () => {
         <section className="bg-secondary/50 py-20 px-8 rounded-lg">
             <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold">Why Seotooler is the Best Choice for YouTubers</h2>
-                <p className="text-muted-foreground mt-3 text-lg">We are dedicated to your growth. Here’s what makes our tools stand out.</p>
+                <p className="text-muted-foreground mt-3 text-lg">We are dedicated to your growth. Here's what makes our tools stand out.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-10 text-center">
                 <div className="flex flex-col items-center">
@@ -150,10 +168,11 @@ const HomePage = () => {
                 <CardContent className="p-0">
                   <p className="text-muted-foreground text-lg mb-6">"{testimonial.quote}"</p>
                   <div className="flex items-center">
-                    <Avatar className="h-12 w-12">
-                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                      <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
+                    <OptimizedAvatar 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name}
+                      fallback={testimonial.name.charAt(0)}
+                    />
                     <div className="ml-4">
                       <p className="font-semibold text-lg">{testimonial.name}</p>
                       <p className="text-sm text-muted-foreground">{testimonial.title}</p>
@@ -166,22 +185,24 @@ const HomePage = () => {
         </section>
 
         {/* FAQ Section */}
-        <section>
-            <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
-                <p className="text-muted-foreground mt-3 text-lg">Have questions? We've got answers.</p>
-            </div>
-            <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
-                {faqs.map((faq, index) => (
-                    <AccordionItem value={`item-${index}`} key={index}>
-                        <AccordionTrigger className="text-lg text-left">{faq.question}</AccordionTrigger>
-                        <AccordionContent className="text-base text-muted-foreground">
-                            {faq.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                ))}
-            </Accordion>
-        </section>
+        <Suspense fallback={<div className="h-64 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div></div>}>
+          <section>
+              <div className="text-center mb-12">
+                  <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
+                  <p className="text-muted-foreground mt-3 text-lg">Have questions? We've got answers.</p>
+              </div>
+              <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+                  {faqs.map((faq, index) => (
+                      <AccordionItem value={`item-${index}`} key={index}>
+                          <AccordionTrigger className="text-lg text-left">{faq.question}</AccordionTrigger>
+                          <AccordionContent className="text-base text-muted-foreground">
+                              {faq.answer}
+                          </AccordionContent>
+                      </AccordionItem>
+                  ))}
+              </Accordion>
+          </section>
+        </Suspense>
 
         {/* Call to Action Section */}
         <section className="text-center bg-primary text-primary-foreground py-16 rounded-lg">

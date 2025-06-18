@@ -7,19 +7,19 @@ const testimonials = [
   {
     name: 'Sarah L.',
     role: 'Digital Marketer',
-    avatar: 'https://i.pravatar.cc/150?img=1',
+    avatar: '',
     text: 'Seotooler has become my go-to for quick and reliable SEO checks. The sheer number of tools available for free is incredible. It has streamlined my workflow and saved me hours of work.'
   },
   {
     name: 'David Chen',
     role: 'Web Developer',
-    avatar: 'https://i.pravatar.cc/150?img=2',
+    avatar: '',
     text: 'As a developer, I appreciate the wide range of web development tools. The JSON and CSS tools are fantastic, and the UI is clean and easy to navigate. Highly recommended for any dev toolkit.'
   },
   {
     name: 'Jessica P.',
     role: 'Content Creator',
-    avatar: 'https://i.pravatar.cc/150?img=7',
+    avatar: '',
     text: 'The content and YouTube tools are a lifesaver! I use the hashtag generator and title extractor daily. It’s amazing that a platform this powerful is completely free.'
   }
 ];

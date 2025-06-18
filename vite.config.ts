@@ -14,7 +14,15 @@ export default defineConfig({
   publicDir: 'public',
   optimizeDeps: {
     exclude: ['lucide-react'],
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-slot'
+    ],
+    force: true
   },
   server: {
     host: true,
@@ -34,48 +42,62 @@ export default defineConfig({
           // Vendor dependencies
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor';
+              return 'vendor-react';
             }
             if (id.includes('react-router')) {
-              return 'router';
+              return 'vendor-router';
             }
             if (id.includes('@radix-ui') || id.includes('lucide-react')) {
-              return 'ui';
+              return 'vendor-ui';
             }
             if (id.includes('date-fns')) {
-              return 'date';
+              return 'vendor-date';
             }
             if (id.includes('javascript-obfuscator')) {
-              return 'js-obfuscator';
+              return 'vendor-js-obfuscator';
             }
             if (id.includes('js-beautify') || id.includes('html-minifier-terser')) {
-              return 'js-tools';
+              return 'vendor-js-tools';
             }
             // Group other large libraries
-            return 'vendor-libs';
+            return 'vendor-misc';
           }
           
-          // Split tools by category
+          // Split tools by category for better caching
           if (id.includes('/tools/')) {
             if (id.includes('JavaScriptObfuscatorTool') || id.includes('JavaScriptMinifierTool')) {
-              return 'js-dev-tools';
+              return 'chunk-js-dev-tools';
             }
             if (id.includes('youtube/') || id.includes('YouTube')) {
-              return 'youtube-tools';
+              return 'chunk-youtube-tools';
             }
             if (id.includes('converter/') || id.includes('Converter')) {
-              return 'converter-tools';
+              return 'chunk-converter-tools';
             }
             if (id.includes('text/') || id.includes('Text')) {
-              return 'text-tools';
+              return 'chunk-text-tools';
             }
             if (id.includes('website/') || id.includes('seo/')) {
-              return 'seo-tools';
+              return 'chunk-seo-tools';
             }
             if (id.includes('image/')) {
-              return 'image-tools';
+              return 'chunk-image-tools';
             }
-            return 'misc-tools';
+            return 'chunk-misc-tools';
+          }
+          
+          // Split pages for better loading
+          if (id.includes('/pages/')) {
+            if (id.includes('Home')) {
+              return 'page-home';
+            }
+            if (id.includes('Tool')) {
+              return 'page-tools';
+            }
+            if (id.includes('Blog')) {
+              return 'page-blog';
+            }
+            return 'page-misc';
           }
         },
         assetFileNames: (assetInfo) => {

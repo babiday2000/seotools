@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import HomePage from '@/pages/Home';
@@ -17,15 +17,31 @@ const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicy'));
 const TermsAndConditionsPage = lazy(() => import('@/pages/TermsAndConditions'));
 const DisclaimerPage = lazy(() => import('@/pages/Disclaimer'));
 
-// Optimized loading component
+// Enhanced loading component with better UX
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center h-64">
+  <div className="flex items-center justify-center h-64" role="status" aria-label="Loading">
     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
     <span className="ml-2 text-sm text-muted-foreground">Loading...</span>
   </div>
 );
 
 function App() {
+  // Performance monitoring
+  useEffect(() => {
+    // Report Web Vitals for monitoring
+    import('web-vitals').then((webVitals) => {
+      if (process.env.NODE_ENV === 'development') {
+        webVitals.onCLS(console.log);
+        webVitals.onINP(console.log); // FID is replaced with INP in v5
+        webVitals.onFCP(console.log);
+        webVitals.onLCP(console.log);
+        webVitals.onTTFB(console.log);
+      }
+    }).catch(() => {
+      // Silently handle if web-vitals is not available
+    });
+  }, []);
+
   return (
     <>
       <Layout>
