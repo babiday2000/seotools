@@ -19,7 +19,7 @@ const DisclaimerPage = lazy(() => import('@/pages/Disclaimer'));
 
 // Enhanced loading component with better UX
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center h-64" role="status" aria-label="Loading">
+  <div className="loading-placeholder" role="status" aria-label="Loading">
     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
     <span className="ml-2 text-sm text-muted-foreground">Loading...</span>
   </div>

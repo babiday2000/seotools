@@ -92,14 +92,14 @@ const HomePage = () => {
       />
       <div className="space-y-24">
         {/* Hero Section */}
-        <section className="hero-container">
+        <section className="hero-container animate-fade-in">
           <h1 className="hero-title">
             Unlock Your YouTube Potential with Top-Tier SEO Tools
           </h1>
           <p className="hero-description text-muted-foreground">
             Elevate your YouTube channel with our suite of free, powerful SEO tools. From in-depth keyword research to comprehensive video optimization, Seotooler is your partner in climbing the ranks.
           </p>
-          <div className="hero-buttons">
+          <div className="flex justify-center gap-4">
             <Button size="lg" onClick={() => navigate('/tools')} className="text-lg px-8 py-6">
               Explore Free Tools
             </Button>
@@ -116,7 +116,7 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <Card 
                 key={feature.title} 
-                className="card-hover-effect"
+                className="transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardHeader className="items-center text-center">
@@ -164,7 +164,7 @@ const HomePage = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial) => (
-              <Card key={testimonial.name} className="p-8 card-hover-effect">
+              <Card key={testimonial.name} className="p-8 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
                 <CardContent className="p-0">
                   <p className="text-muted-foreground text-lg mb-6">"{testimonial.quote}"</p>
                   <div className="flex items-center">
