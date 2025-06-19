@@ -1,7 +1,12 @@
 [build]
-  command = "npm run build"
+  command = "bash netlify-build.sh"
   publish = "dist"
   framework = "#static"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "9"
+  NODE_OPTIONS = "--max-old-space-size=8192"
 
 # Performance optimizations
 [[headers]]
