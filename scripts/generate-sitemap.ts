@@ -1,8 +1,38 @@
-import { writeFileSync, existsSync, mkdirSync } from 'fs';
+import { writeFileSync, existsSync, mkdirSync, readFileSync } from 'fs';
 import { tools, toolCategories } from '../src/data/tools.tsx';
 import { blogPosts } from '../src/data/blog.ts';
 
 const BASE_URL = 'https://seotooler.studio';
+
+// XML escaping function to prevent injection
+const escapeXml = (unsafe: string): string => {
+  return unsafe.replace(/[<>&'"]/g, (c) => {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '"': return '&quot;';
+      case "'": return '&#39;';
+      default: return c;
+    }
+  });
+};
+
+// Validate URL format
+const isValidUrl = (url: string): boolean => {
+  try {
+    const urlObj = new URL(url);
+    return urlObj.protocol === 'https:' && urlObj.hostname === 'seotooler.studio';
+  } catch {
+    return false;
+  }
+};
+
+// Validate and sanitize URL
+const sanitizeUrl = (url: string): string => {
+  const sanitized = url.replace(/[^a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=%]/g, '');
+  return isValidUrl(sanitized) ? sanitized : '';
+};
 
 const generateSitemap = () => {
   const urls = [];
@@ -20,32 +50,41 @@ const generateSitemap = () => {
   ];
 
   staticPages.forEach(page => {
-    urls.push({
-      loc: `${BASE_URL}${page.path}`,
-      lastmod: new Date().toISOString(),
-      changefreq: page.changefreq,
-      priority: page.priority,
-    });
+    const pageUrl = `${BASE_URL}${page.path}`;
+    if (isValidUrl(pageUrl)) {
+      urls.push({
+        loc: escapeXml(pageUrl),
+        lastmod: new Date().toISOString(),
+        changefreq: page.changefreq,
+        priority: page.priority,
+      });
+    }
   });
 
-  // Add tool category pages
+  // Add tool category pages with validation
   for (const categorySlug in toolCategories) {
-    urls.push({
-      loc: `${BASE_URL}/tools/${categorySlug}`,
-      lastmod: new Date().toISOString(),
-      changefreq: 'weekly',
-      priority: 0.8,
-    });
+    const categoryUrl = `${BASE_URL}/tools/${categorySlug}`;
+    if (isValidUrl(categoryUrl)) {
+      urls.push({
+        loc: escapeXml(categoryUrl),
+        lastmod: new Date().toISOString(),
+        changefreq: 'weekly',
+        priority: 0.8,
+      });
+    }
   }
 
-  // Add individual tool pages
+  // Add individual tool pages with validation
   tools.forEach(tool => {
-    urls.push({
-      loc: `${BASE_URL}/tools/${tool.category}/${tool.slug}`,
-      lastmod: new Date().toISOString(),
-      changefreq: 'monthly',
-      priority: 0.7,
-    });
+    const toolUrl = `${BASE_URL}/tools/${tool.category}/${tool.slug}`;
+    if (isValidUrl(toolUrl)) {
+      urls.push({
+        loc: escapeXml(toolUrl),
+        lastmod: new Date().toISOString(),
+        changefreq: 'monthly',
+        priority: 0.7,
+      });
+    }
   });
 
   // Extract unique blog categories from tags
@@ -58,32 +97,41 @@ const generateSitemap = () => {
     });
   });
 
-  // Add blog category pages
+  // Add blog category pages with validation
   blogCategories.forEach(category => {
-    urls.push({
-      loc: `${BASE_URL}/blog/category/${category}`,
-      lastmod: new Date().toISOString(),
-      changefreq: 'weekly',
-      priority: 0.6,
-    });
+    const categoryUrl = `${BASE_URL}/blog/category/${category}`;
+    if (isValidUrl(categoryUrl)) {
+      urls.push({
+        loc: escapeXml(categoryUrl),
+        lastmod: new Date().toISOString(),
+        changefreq: 'weekly',
+        priority: 0.6,
+      });
+    }
   });
 
-  // Add individual blog posts
+  // Add individual blog posts with validation
   blogPosts.forEach(post => {
     // Parse date to get proper lastmod
     const postDate = new Date(post.date);
     const lastmod = isNaN(postDate.getTime()) ? new Date().toISOString() : postDate.toISOString();
     
-    urls.push({
-      loc: `${BASE_URL}/blog/${post.slug}`,
-      lastmod: lastmod,
-      changefreq: 'monthly',
-      priority: 0.6,
-    });
+    const postUrl = `${BASE_URL}/blog/${post.slug}`;
+    if (isValidUrl(postUrl)) {
+      urls.push({
+        loc: escapeXml(postUrl),
+        lastmod: lastmod,
+        changefreq: 'monthly',
+        priority: 0.6,
+      });
+    }
   });
 
+  // Filter out any invalid URLs
+  const validUrls = urls.filter(url => url.loc && url.loc.length > 0);
+
   // Sort URLs by priority (highest first) and then alphabetically
-  urls.sort((a, b) => {
+  validUrls.sort((a, b) => {
     if (a.priority !== b.priority) {
       return b.priority - a.priority;
     }
@@ -92,7 +140,7 @@ const generateSitemap = () => {
 
   const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
+${validUrls
   .map(
     url => `  <url>
     <loc>${url.loc}</loc>
@@ -104,16 +152,35 @@ ${urls
   .join('\n')}
 </urlset>`;
 
-  writeFileSync('public/sitemap.xml', sitemapContent);
-  
-  // Also write to dist directory if it exists (for production builds)
-  if (existsSync('dist')) {
-    writeFileSync('dist/sitemap.xml', sitemapContent);
+  // Ensure directories exist
+  if (!existsSync('public')) {
+    mkdirSync('public', { recursive: true });
+  }
+  if (!existsSync('dist')) {
+    mkdirSync('dist', { recursive: true });
+  }
+
+  // Write sitemap files with validation
+  try {
+    writeFileSync('public/sitemap.xml', sitemapContent, 'utf8');
+    writeFileSync('dist/sitemap.xml', sitemapContent, 'utf8');
+    
+    // Validate the written files
+    const publicContent = readFileSync('public/sitemap.xml', 'utf8');
+    const distContent = readFileSync('dist/sitemap.xml', 'utf8');
+    
+    if (!publicContent.includes('<?xml') || !distContent.includes('<?xml')) {
+      throw new Error('Generated sitemap files are invalid');
+    }
+    
+  } catch (error) {
+    console.error('❌ Error writing sitemap files:', error);
+    throw error;
   }
   
   // Generate sitemap statistics
   const stats = {
-    total: urls.length,
+    total: validUrls.length,
     staticPages: staticPages.length,
     toolCategories: Object.keys(toolCategories).length,
     tools: tools.length,
