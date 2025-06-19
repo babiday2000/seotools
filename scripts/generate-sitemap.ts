@@ -1,8 +1,8 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync, existsSync, mkdirSync } from 'fs';
 import { tools, toolCategories } from '../src/data/tools.tsx';
 import { blogPosts } from '../src/data/blog.ts';
 
-const BASE_URL = 'https://www.seotooler.studio';
+const BASE_URL = 'https://seotooler.studio';
 
 const generateSitemap = () => {
   const urls = [];
@@ -105,6 +105,11 @@ ${urls
 </urlset>`;
 
   writeFileSync('public/sitemap.xml', sitemapContent);
+  
+  // Also write to dist directory if it exists (for production builds)
+  if (existsSync('dist')) {
+    writeFileSync('dist/sitemap.xml', sitemapContent);
+  }
   
   // Generate sitemap statistics
   const stats = {

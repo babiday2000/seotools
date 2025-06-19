@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.js",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run sitemap",
     "build:analyze": "npm run build && node scripts/analyze-performance.js",
     "lint": "eslint .",
     "preview": "vite preview",
