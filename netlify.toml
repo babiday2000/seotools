@@ -8,6 +8,15 @@
   NPM_VERSION = "9"
   NODE_OPTIONS = "--max-old-space-size=8192"
 
+[dev]
+  command = "npm run dev"
+  targetPort = 5173
+  port = 8888
+  autoLaunch = false
+
+[functions]
+  directory = "netlify/functions"
+
 # Performance optimizations
 [[headers]]
   for = "/assets/*"
@@ -154,6 +163,11 @@
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
   status = 200
 
 [[redirects]]
